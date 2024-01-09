@@ -67,10 +67,7 @@ const saluti = [
   'Buon Notte'
 ]
 
-
-
-let salutiTime = 'Buongiorno'
-
+let salutiTime = ''
 
 onMount(()=>{
   if (typeof window !== 'undefined'){
@@ -79,32 +76,29 @@ onMount(()=>{
       salutiTime = JSON.parse(salvaTime)
     }
   }
-
 })
 
 const salutoTempo=()=>{
-  const tempo = setInterval(()=>{
-    let time = test.toLocaleTimeString('it-IT', {hour: '2-digit', minute: '2-digit', second: '2-digit'})
-    if (time === '05:00:00'){
+    let time = test.getHours()
+    if (typeof window !== 'undefined'){
+    if (time >= 5 && time < 12){
     salutiTime = saluti[0]
     localStorage.setItem('salutiTime', JSON.stringify(salutiTime))
-  }else if (time === '13:00:00'){
+  }else if (time >= 13 && time < 18){
    salutiTime = saluti[1]
    localStorage.setItem('salutiTime', JSON.stringify(salutiTime))
-  }else if (time === '19:00:00'){
+  }else if (time >= 19 && time < 23){
    salutiTime = saluti[2]
    localStorage.setItem('salutiTime', JSON.stringify(salutiTime))
-  }else if (time === '00:00:00'){
+  }else if (time >= 0 && time < 4){
    salutiTime = saluti[3]
    localStorage.setItem('salutiTime', JSON.stringify(salutiTime))
   }
-  }, 1000)
- return()=> clearInterval(tempo)
 }
-
+} 
 salutoTempo()
 
-
+/*
 const frasi = [
   'ciao',
   'come stai?',
@@ -121,9 +115,8 @@ const frasiRandom=()=>{
   }, 5000)
   return ()=> clearInterval(random)
 }
-
 frasiRandom()
-
+*/
 
 
 </script>  
