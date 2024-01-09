@@ -69,7 +69,7 @@ const saluti = [
 
 
 
-let salutiTime = ''
+let salutiTime = 'Buongiorno'
 
 
 onMount(()=>{
