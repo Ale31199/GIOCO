@@ -27,7 +27,7 @@ const saluti = [
   'Buongiorno',
   'Buon Pomeriggio',
   'Buona Sera',
-  'Buon Notte'
+  'Buona Notte'
 ]
 
 let salutiTime = ''
@@ -42,21 +42,18 @@ onMount(()=>{
 })
 
 const salutoTempo=()=>{
-    let time = test.getHours()
+  let time = test.getHours()
     if (typeof window !== 'undefined'){
     if (time >= 5 && time < 12){
     salutiTime = saluti[0]
-    localStorage.setItem('salutiTime', JSON.stringify(salutiTime))
   }else if (time >= 13 && time < 18){
    salutiTime = saluti[1]
-   localStorage.setItem('salutiTime', JSON.stringify(salutiTime))
   }else if (time >= 19 && time < 23){
    salutiTime = saluti[2]
-   localStorage.setItem('salutiTime', JSON.stringify(salutiTime))
   }else if (time >= 0 && time < 4){
    salutiTime = saluti[3]
-   localStorage.setItem('salutiTime', JSON.stringify(salutiTime))
   }
+  localStorage.setItem('salutiTime', JSON.stringify(salutiTime))
 }
 } 
 salutoTempo()
@@ -68,7 +65,7 @@ const frasi = [
   'Buongiorno'
 ] 
 
-let testofrasi= 'ciao'
+let testofrasi= ''
 
 const frasiRandom=()=>{
   const random = setInterval(()=>{

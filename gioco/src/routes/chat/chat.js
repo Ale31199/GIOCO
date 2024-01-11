@@ -1,23 +1,20 @@
-const express = require('express');
-const http = require('http');
 const WebSocket = require('ws');
+const server = new WebSocket.Server({ port: 5173 });
 
-const app = express();
-const server = http.createServer(app);
-const ws = new WebSocket.Server({ server });
+const clients = new Set();
 
-ws.on('connection', (currentClient) => {
-	currentClient.on('message', (message) => {
-		// Invia il messaggio a tutti gli altri utenti connessi
-		ws.clients.forEach((client) => {
-			if (client !== currentClient && client.readyState === WebSocket.OPEN) {
-				client.send(message);
-			}
-		});
-	});
+server.on('message', (socket, message) => {
+	try {
+		const data = JSON.parse(message);
+
+		// Verifica se l'ID del destinatario corrisponde a quello del socket corrente
+		if (socket.friendId === data.receiverId) {
+			// Invia il messaggio solo al destinatario corrente
+			socket.send(JSON.stringify({ sender: data.sender, text: data.text }));
+		}
+	} catch (error) {
+		console.error('Errore durante il parsing del messaggio:', error);
+	}
 });
 
-const port = process.env.PORT || 5173;
-server.listen(port, '192.168.1.7', () => {
-	console.log(`Server running on port ${port}`);
-});
+console.log('WebSocket server is running on ws://localhost:8080');
