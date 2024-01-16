@@ -6,15 +6,15 @@
 </div>
 
 <div class='flex w-[100%] justify-center absolute top-[10%] 2xl:top-[20%]'>
-  <div class="bg-gradient-to-t from-slate-900 to-slate-950 border-2 border-slate-600 h-[550px] md:h-[700px] w-[95%] md:w-[80%] lg:w-[60%] 2xl:w-[40%] 2xl:scale-125  rounded-2xl">
+  <div class="bg-gradient-to-t from-slate-900 to-slate-950 border-2 border-slate-600 h-[550px] md:h-[700px] w-[95%] md:w-[80%] lg:w-[60%] 2xl:w-[40%] rounded-2xl">
     <div class="flex justify-center w-[100%]">
-      <img src={layla} class="w-[200px] md:w-[300px] lg:w-[400px] 2xl:w-[500px]"/>
+      <img src={layla} class="w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px] sfoca2"/>
     </div>
   
-   <div class="flex justify-center w-[100%]">
+   <div class="flex justify-center w-[100%] sfoca2">
     <div class="bg-gradient-to-t from-pink-900 to-pink-950 border-2 border-pink-900 rounded-xl flex items-center justify-center w-[95%] h-[300px]">
-      <div class="{crediti ? "hidden" : "grid"} {opzioni ? "hidden": "grid"} {nuova ? "hidden": "grid"} w-[95%] h-[280px] border-2 border-pink-900 bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-4 gap-8 p-3 justify-center justify-items-center">
-      <button on:click="{()=>apriMenu('cont')}" disabled={!cont} class="{cont ? "": "opacity-20 cursor-not-allowed"} text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">Continua Partita</button>
+      <div class="{crediti ? "hidden" : "grid"} {opzioni ? "hidden": "grid"} {nuova ? "hidden": "grid"} {cont2 ? "hidden": "grid"}  w-[95%] h-[280px] border-2 border-pink-900 bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-4 gap-8 p-3 justify-center justify-items-center">
+      <button on:click="{()=>apriMenu('cont')}" disabled={cont} class="{cont ? "opacity-20 cursor-not-allowed": ""} text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">Continua Partita</button>
       <button on:click="{()=>apriMenu('nuova')}" class="text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">Nuova Partita</button>
       <button on:click="{()=>apriMenu('opzioni')}" class=" text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">Opzioni</button>
       <button on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">Crediti</button>
@@ -22,49 +22,63 @@
     </div>
 
       <div class="{crediti ? "grid": "hidden"}  w-[95%] h-[280px] border-2 border-pink-900 bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
-        <p class="monst text-white font-bold relative top-[100px]">Giochino creato da Alessio Santillo</p>
+        <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce top-[100px]">Gioco ideato e sviluppato da Alessio Santillo</p>
         <p on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[80%] h-[50px] relative top-[30px] rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">Torna al menu principale</p>
       </div>
 
       <div class="{opzioni ? "grid": "hidden"}  w-[95%] h-[280px] border-2 border-pink-900 bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
-        <p class="monst text-white font-bold relative top-[100px]">Da mettere: Emo Layla, Giuggy Mode, Ciclo Layla</p>
+        <p class="monst text-white text-[10px] md:text-sm font-bold relative top-[100px]">Da mettere: Layla Noir, Layla Demon, Layla Classic </p>
         <p on:click="{()=>apriMenu('opzioni')}" class="text-white monst flex items-center cursor-pointer justify-center w-[80%] h-[50px] relative top-[30px] rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">Torna al menu principale</p>
       </div>
 
-      <div class="{nuova ? "grid": "hidden"} {cont ? "grid": "hidden"}  sfoca w-[100%] h-[280px] border-2 border-pink-900 bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
-        <div class="{caricamento ? "hidden": "flex"} {latrama ? "hidden": "flex"}  justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
-          <p class=" sfoca2 monst text-white text-sm font-bold relative top-[5px] text-justify flex justify-start ">Benvenuto a Le Avventure di Layla! per cominciare, inserisci il tuo nome di merda, muoviti:</p>
-          <div class="flex justify-center items-center w-[100%] top-[55px] relative flex-col" >
+      <div class="{nuova ? "grid": "hidden"}  sfoca w-[100%] h-[280px] border-2 border-pink-900 bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
+        <div class="{caricamento ? "hidden": "flex"} {caricamento2 ? "hidden": "flex"} {latrama ? "hidden": "flex"} justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
+          <p class=" sfoca2 monst text-white text-[10px] md:text-sm font-bold relative top-[-18px] text-justify flex justify-start ">Benvenuto su Undead Layla! per cominciare, inserisci il tuo nome di merda, muoviti:</p>
+          <div class="flex justify-center items-center w-[100%] top-[35px] relative flex-col" >
             <input on:change="{Entra}" placeholder="Inserisci il tuo lurido nome qui..." bind:value="{nome}" class="rounded-xl outline-none w-[300px] p-3 mb-2" maxlength="30"/>
-            <button on:click="{()=>salvaNome()}" class='text-white font-semibold rounded-xl bg-gradient-to-t from-green-950 to-green-600 border-2 border-green-600 hover:from-teal-950 hover:to-teal-600 hover:border-teal-600 w-[300px]'>Fatto</button>
+            <button on:click="{()=>salvaNome()}" class='text-white font-semibold rounded-xl p-2 bg-gradient-to-t from-green-950 to-green-600 border-2 border-green-600 hover:from-teal-950 hover:to-teal-600 hover:border-teal-600 w-[300px]'>Fatto</button>
           </div>
         </div>
 
         <div class="{latrama ? "flex": "hidden"} justify-start w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
-          <p class=" sfoca2 monst text-white text-sm font-bold relative top-[5px] text-justify flex justify-start ">{trama}</p>
-          
+          <p class=" sfoca2 monst text-white text-[10px] sm:text-sm font-bold relative top-[5px] text-justify flex justify-start ">{trama}</p>
         </div>
 
         
-        <p class="{caricamento ? "visible": "invisible"} sfoca monst text-white font-bold absolute top-[100px] pulsa">Caricamento...</p>
+        <p class="{caricamento ? "visible": "invisible"} sfoca monst text-white text-xs md:text-base font-bold justify-center items-center absolute top-[150px] sm:top-[100px] pulsa">Caricamento...</p>
+
         <div class="flex flex-row w-[100%] top-[-150px] justify-between relative">
           <p on:click="{()=>apriMenu('menu')}" class="{caricamento ? "hidden": "flex"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[20%] h-[30px] relative rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">Menu</p>
-          <p on:click="{()=>salvaGame()}" class="{caricamento ? "hidden": "flex"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[40%] h-[30px] relative  rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">{save}</p> 
+          <p on:click="{()=>salvaGame()}" class="{salvata ? "flex": "hidden"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[40%] h-[30px] relative  rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">{save}</p> 
         </div>
+
+
+
+
+        <div class="{cont2 ? "grid": "hidden"}  sfoca w-[100%] h-[280px] border-2 border-pink-900 bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
+       
+          <div class="{latrama2 ? "flex": "hidden"} justify-start w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
+            <p class=" sfoca2 monst text-white text-sm font-bold relative top-[5px] text-justify flex justify-start ">{trama}</p>
+          </div>
+  
+          <p class="{caricamento2 ? "visible": "invisible"}  sfoca monst text-white font-bold absolute top-[100px] pulsa">Caricamento...</p>
+          <div class="flex flex-row w-[100%] top-[-150px] justify-between relative">
+            <p on:click="{()=>apriMenu('menu')}" class="{caricamento2 ? "hidden": "flex"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[20%] h-[30px] relative rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">Menu</p>
+            <p on:click="{()=>salvaGame()}" class="{salvata2 ? "flex": "hidden"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[40%] h-[30px] relative  rounded-xl bg-gradient-to-t from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900">{save}</p> 
+          </div>
+        </div>
+
+
       </div>
-
-
-
     </div>
    </div>
 
    <div class="flex flex-col w-[100%] relative top-[3%] items-center justify-center">
-    <button on:click="{()=>gioca('risp')}" disabled={blocca} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2 border-2 border-pink-900 bg-gradient-to-b from-pink-950 to-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900 text-white font-semibold">{risp}</button>
-    <button on:click="{()=>gioca('risp1')}" disabled={blocca} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} sfoca w-[95%] h-[50px]  monst relative rounded-xl p-3 mb-2 border-2 border-pink-900 bg-gradient-to-b from-pink-950 to-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900 text-white font-semibold">{risp1}</button>
+    <button on:click="{()=>gioca('risp')}" disabled={blocca} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2 border-2 border-pink-900 bg-gradient-to-b from-pink-950 to-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900 text-white font-semibold">{risp}</button>
+    <button on:click="{()=>gioca('risp1')}" disabled={blocca || blocca2} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} {blocca2 ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px]  monst relative rounded-xl p-3 mb-2 border-2 border-pink-900 bg-gradient-to-b from-pink-950 to-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900 text-white font-semibold">{risp1}</button>
   </div>
 
   </div>
-
 </div>
 
 
@@ -79,19 +93,26 @@
 
   let nome = ''
   let latrama = false
+  let latrama2  = false
+  let salvata = false
+  let salvata2 = false
 
-
-  const salvaNome=()=>{
-    const sNome = localStorage.getItem('nome') 
+    onMount(()=>{
+      if (typeof window !== 'undefined'){
+      const sNome = localStorage.getItem('nome') 
     if (sNome){
       nome = JSON.parse(sNome)
-    }   
+    }
+  }})
 
-    if (typeof window !== 'undefined'){
+  const salvaNome=()=>{
       latrama = true
+      latrama2 = true
+      salvata = true
+      salvata2 = true
       localStorage.setItem('nome', JSON.stringify(nome))
     
-  }
+  
 
   setTimeout(()=>{
     blocca = false
@@ -134,7 +155,15 @@ let risp = ''
 let risp1 = ''
 let nextLevel = 'intro';
 let blocca = true
+let blocca2 = false
 
+
+const newGame=()=>{
+  nextLevel = 'intro'
+  trama = storia.intro.text
+  risp = storia.intro.ris[0]
+  risp1 = storia.intro.ris[1]
+}
 
 
   const gioca=(risposta)=>{
@@ -147,6 +176,7 @@ let blocca = true
    console.log(trama)
       break;
       case 'risp1':
+      
       nextLevel = storia[nextLevel].nextLev[1]
       trama = storia[nextLevel].text
    risp = storia[nextLevel].ris[0]
@@ -156,16 +186,13 @@ let blocca = true
       default:
         break;
    }
-  
+   if (risp1 === ''){
+    blocca2 = true
+   }
   }
 
 
-  const continueGame=()=>{
-   localStorage.getItem('nextLevel')
-   localStorage.getItem('trama')
-   localStorage.getItem('risp')
-   localStorage.getItem('risp1')
-  }
+  let save = 'Salva la partita'
 
   const giocoSalvato= async ()=>{
     save = 'Salvataggio...';
@@ -177,15 +204,12 @@ let blocca = true
   save = 'Salva la partita';
 }
 
+  
+  let cont = true
 
-  let save = 'Salva la partita'
-
-  const salvaGame=()=>{
-    cont = true
-
-    giocoSalvato()
-
-    const salvaCont = localStorage.getItem('cont')
+  onMount(()=>{
+  if (typeof window !== 'undefined'){
+  const salvaCont = localStorage.getItem('cont')
     const salvaTrama = localStorage.getItem('trama')
     const salvaRisp =localStorage.getItem('risp')
     const salvaRisp1 = localStorage.getItem('risp1')
@@ -206,40 +230,43 @@ let blocca = true
     if (salvaCont){
       cont = JSON.parse(salvaCont)
     }
+  }
+})
 
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('cont', JSON.stringify(cont))
+const continuaGame=()=>{
+
+  const salvaTrama = localStorage.getItem('trama')
+    const salvaRisp =localStorage.getItem('risp')
+    const salvaRisp1 = localStorage.getItem('risp1')
+    const salvaLev =localStorage.getItem('nextLevel')
+
+  nextLevel = salvaLev
+  trama = salvaTrama
+  risp = salvaRisp
+  risp1 = salvaRisp1
+}
+
+
+
+  const salvaGame=()=>{
+    giocoSalvato()
+    cont = false
+    localStorage.setItem('cont', JSON.stringify(cont))
     localStorage.setItem('trama', JSON.stringify(trama));
     localStorage.setItem('risp', JSON.stringify(risp));
     localStorage.setItem('risp1', JSON.stringify(risp1));
     localStorage.setItem('nextLevel', JSON.stringify(nextLevel));
   }
 
-    setTimeout(()=>{
-      save = 'Salvataggio...'
-    }, 3000)
-
-    setTimeout(()=>{
-      save = 'Partita Salvata!'
-    }, 6000)
-
-  }
-
-
-const newGame=()=>{
-  nextLevel = 'intro'
-  trama = storia.intro.text
-  risp = storia.intro.ris[0]
-  risp1 = storia.intro.ris[1]
-}
 
 
   let crediti = false
   let opzioni = false
   let nuova = false
-  let cont = false
-
   let caricamento = false
+  let cont2 = false
+  let caricamento2 = false
+
  
   const apriMenu=(menu)=>{
    switch (menu) {
@@ -249,10 +276,11 @@ const newGame=()=>{
         crediti = true
       opzioni = false
       nuova = false
-      cont = false
       }, 600)
     } else{
+      setTimeout(()=>{
       crediti = false
+    }, 600)
     }break;
       case 'opzioni':
     if (!opzioni){
@@ -260,25 +288,32 @@ const newGame=()=>{
         opzioni = true
       crediti = false
       nuova = false
-      cont = false
       }, 600)
     } else{
+      setTimeout(()=>{
       opzioni = false
+    }, 600)
     }break;
     case 'menu':
       if (nuova){
+        setTimeout(()=>{
         nuova = false
       blocca = true
       latrama = false
+      salvata = false
+    }, 600)
       }
       break;
       case 'nuova':
     if (!nuova){ 
       setTimeout(()=>{
         newGame()
+        cont = true
+        localStorage.setItem('cont', JSON.stringify(cont))
         blocca = true
         nuova = true
         caricamento = true
+        cont2 = false
       opzioni = false
       crediti = false
       }, 1000)
@@ -286,6 +321,7 @@ const newGame=()=>{
         nuova = true
         caricamento = false
       opzioni = false
+      cont2 = false
       crediti = false
       blocca = true
       }, 5000)
@@ -295,25 +331,30 @@ const newGame=()=>{
       latrama = false
     }break;
       case 'cont':
-    if (!cont){
+        
+      salvaNome()
+      if (cont2){ 
       setTimeout(()=>{
-        continueGame()
+        continuaGame()
+        blocca = true
+        nuova = false
+        caricamento2 = true
+        cont2 = false
       opzioni = false
-      nuova = false
       crediti = false
-      caricamento = true
-      blocca = true
       }, 1000)
       setTimeout(()=>{
+        nuova = false
+        caricamento2 = false
       opzioni = false
-      nuova = false
+      cont2 = false
       crediti = false
-      caricamento = false
       blocca = true
       }, 5000)
     } else{
+      nuova = true
       blocca = true
-      latrama = false
+      latrama2 = false
     }break;
    
     default:
@@ -322,6 +363,9 @@ const newGame=()=>{
   }
 
  
+
+
+
 
 
   let test = new Date()
