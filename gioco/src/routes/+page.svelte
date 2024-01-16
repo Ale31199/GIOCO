@@ -6,48 +6,48 @@
 </div>
 
 <div class='flex w-[100%] justify-center absolute top-[10%] 2xl:top-[20%]'>
-  <div class="bg-gradient-to-t {incognito ? "from-neutral-900 to-neutral-950 border-2 border-neutral-600": "from-slate-900 to-slate-950 border-2 border-slate-600"} {demone ? "to-red-900 from-neutral-950 border-2 border-red-600": "from-slate-900 to-slate-950 border-2 border-slate-600"} h-[550px] md:h-[700px] w-[95%] md:w-[80%] lg:w-[60%] 2xl:w-[40%] rounded-2xl">
+  <div class="bg-gradient-to-t  h-[550px] md:h-[700px] w-[95%] md:w-[80%] lg:w-[60%] 2xl:w-[40%] rounded-2xl {incognito ? "from-neutral-900 to-neutral-950 border-2 border-neutral-600": "from-slate-900 to-slate-950 border-2 border-slate-600" && demone ? "to-red-900 from-neutral-950 border-2 border-red-600": "from-slate-900 to-slate-950 border-2 border-slate-600"}">
     <div class="flex justify-center w-[100%]">
-      <img src={layla} class="w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px] sfoca2"/>
+      <img src={layla} alt="layla" class="w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px] sfoca2"/>
     </div>
   
    <div class="flex justify-center w-[100%] sfoca2">
-    <div class="bg-gradient-to-t {incognito ? " from-neutral-800 to-neutral-950 border-2 border-neutral-800":" from-pink-900 to-pink-950 border-2 border-pink-900"} {demone ? " from-neutral-900 to-neutral-950 border-2 border-neutral-900":" from-pink-900 to-pink-950 border-2 border-pink-900"}  rounded-xl flex items-center justify-center w-[95%] h-[300px]">
-      <div class="{crediti ? "hidden" : "grid"} {opzioni ? "hidden": "grid"} {nuova ? "hidden": "grid"} {cont2 ? "hidden": "grid"}  w-[95%] h-[280px] border-2 {incognito ?"border-neutral-800":"border-pink-900"} {demone ?"border-red-800":"border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-4 gap-8 p-3 justify-center justify-items-center">
-      <button on:click="{()=>apriMenu('cont')}" disabled={cont} class="{cont ? "opacity-20 cursor-not-allowed": ""} text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Continua Partita</button>
-      <button on:click="{()=>apriMenu('nuova')}" class="text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Nuova Partita</button>
-      <button on:click="{()=>apriMenu('opzioni')}" class=" text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Opzioni</button>
-      <button on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Crediti</button>
+    <div class="bg-gradient-to-t {incognito ? "from-neutral-800 to-neutral-950 border-2 border-neutral-800":" from-pink-900 to-pink-950 border-2 border-pink-900" && demone ? "from-neutral-900 to-neutral-950 border-2 border-neutral-900":" from-pink-900 to-pink-950 border-2 border-pink-900"}  rounded-xl flex items-center justify-center w-[95%] h-[300px]">
+      <div class="{crediti ? "hidden" : "grid"} {opzioni ? "hidden": "grid"} {nuova ? "hidden": "grid"} {cont2 ? "hidden": "grid"}  w-[95%] h-[280px] border-2 {incognito ? "border-neutral-800":"border-pink-900" && demone ? "border-red-800":"border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-4 gap-8 p-3 justify-center justify-items-center">
+      <button on:click="{()=>apriMenu('cont')}" disabled={cont} class="{cont ? "opacity-20 cursor-not-allowed": ""} text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Continua Partita</button>
+      <button on:click="{()=>apriMenu('nuova')}" class="text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Nuova Partita</button>
+      <button on:click="{()=>apriMenu('opzioni')}" class=" text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Opzioni</button>
+      <button on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Crediti</button>
      
     </div>
 
-      <div class="{crediti ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ?"border-2 border-neutral-900":"border-2 border-pink-900"} {demone ?"border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
+      <div class="{crediti ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
         <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce top-[100px]">Gioco ideato e sviluppato da Alessio Santillo</p>
-        <p on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[80%] h-[50px] relative top-[30px] rounded-xl bg-gradient-to-t {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Torna al menu principale</p>
+        <button on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[80%] h-[50px] relative top-[30px] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Torna al menu principale</button>
       </div>
 
-      <div class="{opzioni ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ?"border-2 border-neutral-900":"border-2 border-pink-900"} {demone ?"border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-2 grid-rows-3 gap-3 gap-y-[130px]  p-3 justify-center justify-items-center">
-        <div on:click="{()=>cambiaMode('inc')}" class="{incognito ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-neutral-950 to-neutral-700  border-neutral-700  hover:border-neutral-300">
-          <img src="{inc}" class="w-[70px] invert" />
+      <div class="{opzioni ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-2 grid-rows-3 gap-3 gap-y-[130px]  p-3 justify-center justify-items-center">
+        <button on:click="{()=>cambiaMode('inc')}" class="{incognito ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-neutral-950 to-neutral-700  border-neutral-700  hover:border-neutral-300">
+          <img src="{inc}" alt="layla" class="w-[70px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Layla Noir</p>
-        </div>
-        <div on:click="{()=>cambiaMode('demon')}"  class="{demone ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-red-950 to-red-700 border-red-700 hover:border-neutral-300">
-          <img src="{demon}" class="w-[70px] mb-1" />
+        </button>
+        <button on:click="{()=>cambiaMode('demon')}"  class="{demone ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-red-950 to-red-700 border-red-700 hover:border-neutral-300">
+          <img src="{demon}" alt="layla" class="w-[70px] mb-1" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Layla Demon</p>
-        </div>
-        <div on:click="{()=>gestisciSuono('musica')}" class="{musica ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-green-950 to-green-700  border-green-700 hover:border-neutral-300">
-          <img src="{music}" class="w-[70px] invert" />
+        </button>
+        <button on:click="{()=>gestisciSuono('musica')}" class="{musica ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-green-950 to-green-700  border-green-700 hover:border-neutral-300">
+          <img src="{music}" alt="layla" class="w-[70px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Music</p>
-        </div>
-        <div on:click="{()=>gestisciSuono('suono')}" class="{suono ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-violet-950 to-violet-700  border-violet-700 hover:border-neutral-300">
-          <img src="{volume}" class="w-[70px] invert" />
+        </button>
+        <button on:click="{()=>gestisciSuono('suono')}" class="{suono ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-violet-950 to-violet-700  border-violet-700 hover:border-neutral-300">
+          <img src="{volume}" alt="layla" class="w-[70px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Sound Effects</p>
-        </div>
+        </button>
         
-        <p on:click="{()=>apriMenu('opzioni')}" class="text-white monst flex items-center cursor-pointer col-span-2 justify-center w-[80%] h-[50px] relative top-[50px] rounded-xl bg-gradient-to-t {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Torna al menu principale</p>
+        <button on:click="{()=>apriMenu('opzioni')}" class="text-white monst flex items-center cursor-pointer col-span-2 justify-center w-[80%] h-[50px] relative top-[50px] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Torna al menu principale</button>
       </div>
 
-      <div class="{nuova ? "grid": "hidden"}  sfoca w-[100%] h-[280px] {incognito ?"border-2 border-neutral-900":"border-2 border-pink-900"} {demone ?"border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
+      <div class="{nuova ? "grid": "hidden"}  sfoca w-[100%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
         <div class="{caricamento ? "hidden": "flex"} {caricamento2 ? "hidden": "flex"} {latrama ? "hidden": "flex"} justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
           <p class=" sfoca2 monst text-white text-[10px] md:text-sm font-bold relative top-[-18px] text-justify flex justify-start ">Benvenuto su Undead Layla! per cominciare, inserisci il tuo nome di merda, muoviti:</p>
           <div class="flex justify-center items-center w-[100%] top-[35px] relative flex-col" >
@@ -64,14 +64,14 @@
         <p class="{caricamento ? "visible": "invisible"} sfoca monst text-white text-xs md:text-base font-bold justify-center items-center absolute top-[150px] sm:top-[100px] pulsa">Caricamento...</p>
 
         <div class="flex flex-row w-[100%] top-[-150px] justify-between relative">
-          <p on:click="{()=>apriMenu('menu')}" class="{caricamento ? "hidden": "flex"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[20%] h-[30px] relative rounded-xl bg-gradient-to-t {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Menu</p>
-          <p on:click="{()=>salvaGame()}" class="{salvata ? "flex": "hidden"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[40%] h-[30px] relative  rounded-xl bg-gradient-to-t {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">{save}</p> 
+          <button on:click="{()=>apriMenu('menu')}" class="{caricamento ? "hidden": "flex"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[20%] h-[30px] relative rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Menu</button>
+          <button on:click="{()=>salvaGame()}" class="{salvata ? "flex": "hidden"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[40%] h-[30px] relative  rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">{save}</button> 
         </div>
 
 
          
 
-        <div class="{cont2 ? "grid": "hidden"}  sfoca w-[100%] h-[280px] {incognito ?"border-2 border-neutral-900":"border-2 border-pink-900"} {demone ?"border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
+        <div class="{cont2 ? "grid": "hidden"}  sfoca w-[100%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
        
           <div class="{latrama2 ? "flex": "hidden"} justify-start w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
             <p class=" sfoca2 monst text-white text-sm font-bold relative top-[5px] text-justify flex justify-start ">{trama}</p>
@@ -79,8 +79,8 @@
   
           <p class="{caricamento2 ? "visible": "invisible"}  sfoca monst text-white font-bold absolute top-[100px] pulsa">Caricamento...</p>
           <div class="flex flex-row w-[100%] top-[-150px] justify-between relative">
-            <p on:click="{()=>apriMenu('menu')}" class="{caricamento2 ? "hidden": "flex"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[20%] h-[30px] relative rounded-xl bg-gradient-to-t {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Menu</p>
-            <p on:click="{()=>salvaGame()}" class="{salvata2 ? "flex": "hidden"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[40%] h-[30px] relative  rounded-xl bg-gradient-to-t {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">{save}</p> 
+            <button on:click="{()=>apriMenu('menu')}" class="{caricamento2 ? "hidden": "flex"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[20%] h-[30px] relative rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Menu</button>
+            <button on:click="{()=>salvaGame()}" class="{salvata2 ? "flex": "hidden"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[40%] h-[30px] relative  rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">{save}</button> 
           </div>
         </div>
 
@@ -90,8 +90,8 @@
    </div>
 
    <div class="flex flex-col w-[100%] relative top-[3%] items-center justify-center">
-    <button on:click="{()=>gioca('risp')}" disabled={blocca} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2  bg-gradient-to-b {incognito ?"from-neutral-950  to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} text-white font-semibold">{risp}</button>
-    <button on:click="{()=>gioca('risp1')}" disabled={blocca || blocca2} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} {blocca2 ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px]  monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito ?"from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} {demone ?"from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} text-white font-semibold">{risp1}</button>
+    <button on:click="{()=>gioca('risp')}" disabled={blocca} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2  bg-gradient-to-b {incognito ? "from-neutral-950  to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} text-white font-semibold">{risp}</button>
+    <button on:click="{()=>gioca('risp1')}" disabled={blocca || blocca2} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} {blocca2 ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px]  monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} text-white font-semibold">{risp1}</button>
   </div>
 
   </div>
@@ -99,7 +99,6 @@
 
 
 
-<!-- C7WN97HZUZLNTWAFGLA5SWTB key per twilio -->
 
 <script>
 	
@@ -533,17 +532,26 @@ const audioScelta = new Audio(scelta);
  case 'suono':
  if (suono){
 const audioScelta = new Audio(scelta);
-  audioScelta.currentTime = 0
-  audioScelta.play()
+const audioMain = new Audio(main)
+const audioOver = new Audio(gameover)
+const audioSaving = new Audio(saving)
+const audioTorna = new Audio(torna)
+
   audioScelta.volume = 0
   audioMain.volume = 0
   audioOver.volume = 0
   audioSaving.volume = 0
   audioTorna.volume = 0
+  audioScelta.currentTime = 0
+  audioScelta.play()
   suono = false
   volume =mute
  }else{
 const audioScelta = new Audio(scelta);
+const audioMain = new Audio(main)
+const audioOver = new Audio(gameover)
+const audioSaving = new Audio(saving)
+const audioTorna = new Audio(torna)
   audioScelta.currentTime = 0
   audioScelta.play()
   suono = true
@@ -560,6 +568,8 @@ const audioScelta = new Audio(scelta);
   localStorage.setItem('musica', JSON.stringify(musica))
   localStorage.setItem('suono', JSON.stringify(suono))
 }
+
+
 
 
   let test = new Date()
@@ -621,8 +631,6 @@ const frasiRandom=()=>{
 }
 frasiRandom()
 */
-
-
 </script>  
 
 
