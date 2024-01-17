@@ -11,6 +11,14 @@
       <img src={sfondo} class="object-cover w-full h-full sfo rounded-2xl opacity-35 {incognito ? "saturate-0":""} absolute" />
       <img src={layla} alt="layla" class="w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px] sfoca2 absolute"/>
     </div>
+
+    <audio src={theme} id='temah' autoplay loop />
+    <audio src={main} id='main' />
+    <audio src={saving} id='saving' />
+    <audio src={scelta} id='scelta' />
+    <audio src={gameover} id='gameover' />
+    <audio src={torna} id='torna' />
+
   
    <div class="flex justify-center w-[100%] sfoca2 relative top-[-450px]">
     <div class="bg-gradient-to-t opacity-95 {incognito ? "from-neutral-800 to-neutral-950 border-2 border-neutral-800":" from-pink-900 to-pink-950 border-2 border-pink-900" && demone ? "from-neutral-900 to-neutral-950 border-2 border-neutral-900":" from-pink-900 to-pink-950 border-2 border-pink-900"}  rounded-xl flex items-center justify-center w-[95%] h-[300px]">
@@ -32,19 +40,19 @@
       </div>
 
       <div class="{opzioni ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-2 grid-rows-3 gap-3 gap-y-[130px]  p-3 justify-center justify-items-center">
-        <button on:click="{()=>cambiaMode('inc')}" class="{incognito ? "border-4 rounded-[50px] md:rounded-full":"border-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-neutral-950 to-neutral-700  border-neutral-700  hover:border-neutral-300">
+        <button on:click="{()=>cambiaMode('inc')}" class="{incognito ? "border-b-4 rounded-[50px] md:rounded-full":"border-b-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-neutral-950 to-transparent  border-neutral-700  hover:border-neutral-300">
           <img src="{inc}" alt="layla" class="w-[60px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Layla Noir</p>
         </button>
-        <button on:click="{()=>cambiaMode('demon')}"  class="{demone ? "border-4 rounded-[50px] md:rounded-full":"border-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-red-950 to-red-700 border-red-700 hover:border-neutral-300">
+        <button on:click="{()=>cambiaMode('demon')}"  class="{demone ? "border-b-4 rounded-[50px] md:rounded-full":"border-b-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-red-950 to-transparent border-red-700 hover:border-neutral-300">
           <img src="{demon}" alt="layla" class="w-[60px] mb-1" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Layla Demon</p>
         </button>
-        <button on:click="{()=>gestisciSuono('musica')}" class="{musica ? "border-4 rounded-[50px] md:rounded-full":"border-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-green-950 to-green-700  border-green-700 hover:border-neutral-300">
+        <button on:click="{gestisciMusica}" class="{musica ? "border-b-4 rounded-[50px] md:rounded-full":"border-b-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-green-950 to-transparent  border-green-700 hover:border-neutral-300">
           <img src="{music}" alt="layla" class="w-[60px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Music</p>
         </button>
-        <button on:click="{()=>gestisciSuono('suono')}" class="{suono ? "border-4 rounded-[50px] md:rounded-full":"border-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-violet-950 to-violet-700  border-violet-700 hover:border-neutral-300">
+        <button on:click="{()=>gestisciSuono()}" class="{suono ? "border-b-4 rounded-[50px] md:rounded-full":"border-b-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-violet-950 to-transparent  border-violet-700 hover:border-neutral-300">
           <img src="{volumeh}" alt="layla" class="w-[60px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Sound Effects</p>
         </button>
@@ -150,6 +158,9 @@
 
   const salvaNome=()=>{
     const audioMain = new Audio(main);
+    if (!suono){
+      audioMain.volume = 0
+    }
    audioMain.currentTime = 0
     audioMain.play()
 
@@ -222,8 +233,10 @@ const newGame=()=>{
 
 
   const gioca=(risposta)=>{
-    
     const audioScelta = new Audio(scelta);
+    if (!suono){
+      audioScelta.volume = 0
+    }
    switch(risposta){
     case 'risp':
       audioScelta.play()
@@ -323,6 +336,9 @@ const continuaGame=()=>{
 
   const salvaGame=()=>{
     const audioSaving = new Audio(saving);
+    if (!suono){
+      audioSaving.volume = 0
+    }
     audioSaving.currentTime = 0
     audioSaving.play()
     giocoSalvato()
@@ -346,10 +362,15 @@ const continuaGame=()=>{
 
  
   const apriMenu=(menu)=>{
+const audioTorna = new Audio(torna);
+const audioMain = new Audio(main);
+if (!suono){
+  audioMain.volume = 0
+  audioTorna.volume = 0
+}
    switch (menu) {
     case 'crediti':
     if (!crediti){
-const audioMain = new Audio(main);
       audioMain.currentTime = 0
         audioMain.play()
       setTimeout(()=>{
@@ -358,7 +379,6 @@ const audioMain = new Audio(main);
       nuova = false
       }, 600)
     } else{
-const audioTorna = new Audio(torna);
       audioTorna.currentTime = 0
       audioTorna.play()
       setTimeout(()=>{
@@ -367,7 +387,6 @@ const audioTorna = new Audio(torna);
     }break;
       case 'opzioni':
     if (!opzioni){
-const audioMain = new Audio(main)
       audioMain.currentTime = 0
         audioMain.play()
       setTimeout(()=>{
@@ -376,7 +395,6 @@ const audioMain = new Audio(main)
       nuova = false
       }, 600)
     } else{
-const audioTorna = new Audio(torna);
       audioTorna.currentTime = 0
       audioTorna.play()
       setTimeout(()=>{
@@ -385,7 +403,6 @@ const audioTorna = new Audio(torna);
     }break;
     case 'menu':
       if (nuova){
-const audioTorna = new Audio(torna);
         audioTorna.currentTime = 0
           audioTorna.play()
         setTimeout(()=>{
@@ -398,7 +415,6 @@ const audioTorna = new Audio(torna);
       break;
       case 'nuova':
     if (!nuova){ 
-const audioMain = new Audio(main);
       audioMain.currentTime = 0
         audioMain.play()
       setTimeout(()=>{
@@ -426,10 +442,8 @@ const audioMain = new Audio(main);
       latrama = false
     }break;
       case 'cont':
-        
       salvaNome()
       if (cont2){ 
-const audioMain = new Audio(main);
         audioMain.currentTime = 0
         audioMain.play()
       setTimeout(()=>{
@@ -491,30 +505,33 @@ const audioMain = new Audio(main);
   let demone = false;
 
   const cambiaMode = (mode) => {
+    const audioScelta = new Audio(scelta);
     switch (mode) {
       case 'inc':
+          if (!suono){
+          audioScelta.volume = 0
+        }
         if (!incognito){
-const audioScelta = new Audio(scelta);
         audioScelta.currentTime = 0;
         audioScelta.play();
         incognito = true;
         demone = false;
         }else{
-          const audioScelta = new Audio(scelta);
         audioScelta.currentTime = 0;
         audioScelta.play();
         incognito = false;
         }
         break;
       case 'demon':
+      if (!suono){
+          audioScelta.volume = 0
+        }
         if (!demone){
-const audioScelta = new Audio(scelta);
         audioScelta.currentTime = 0;
         audioScelta.play();
         demone = true;
         incognito = false;
         }else{
-          const audioScelta = new Audio(scelta);
         audioScelta.currentTime = 0;
         audioScelta.play();
         demone = false;
@@ -525,75 +542,63 @@ const audioScelta = new Audio(scelta);
     localStorage.setItem('incognito', JSON.stringify(incognito));
   };
 
+  /*
+    const audioScelta = document.getElementById('scelta');
+  const audioMain = document.getElementById('main');
+  const audioOver = document.getElementById('gameover');
+  const audioSaving = document.getElementById('saving');
+  const audioTorna = document.getElementById('torna');
+  audioMain.volume = 0;
+audioOver.volume = 0;
+audioSaving.volume = 0;
+audioTorna.volume = 0;
+*/
+
 
  let musica = true
  let suono = true
  let volumeh = vol
 
-/* 
- onMount(()=>{
-      const tema = new Audio(theme);
-      tema.play();
-      tema.loop = true
-  });
-*/
- 
-
-
-const gestisciSuono=(opt)=>{
-  switch(opt){
- case 'musica':
-  const tema = new Audio(theme)
- if (musica){
-const audioScelta = new Audio(scelta);
-  
-  audioScelta.play()
-  audioScelta.currentTime = 0
-  musica = false
- }else{
-  const tema = new Audio(theme)
-  tema.pause()
-const audioScelta = new Audio(scelta);
-  audioScelta.play()
-  audioScelta.currentTime = 0
-  musica = true
- }
- break;
- case 'suono':
- const audioScelta = new Audio(scelta);
-const audioMain = new Audio(main)
-const audioOver = new Audio(gameover)
-const audioSaving = new Audio(saving)
-const audioTorna = new Audio(torna)
- if (suono){
-  audioScelta.muted = true
-  audioMain.muted = true
-  audioOver.muted = true
-  audioSaving.muted = true
-  audioTorna.muted = true
-  audioScelta.currentTime = 0
-  audioScelta.play()
-  suono = false
-  volumeh = mute
- }else{
-  audioScelta.currentTime = 0
-  audioScelta.play()
-  suono = true
-  audioScelta.muted = false
-  audioMain.muted = false
-  audioOver.muted = false
-  audioSaving.muted = false
-  audioTorna.muted = false
-  volumeh = vol
- }
- break;
+ const gestisciSuono = () => {
+  const audioScelta = document.getElementById('scelta');
+  if (suono) {
+    suono = false;
+    volumeh = mute;
+  } else {
+    audioScelta.currentTime = 0;
+    audioScelta.play();
+    suono = true;
+    volumeh = vol;
   }
-  localStorage.setItem('volumeh', JSON.stringify(volumeh))
+  localStorage.setItem('volumeh', JSON.stringify(volumeh));
+  localStorage.setItem('suono', JSON.stringify(suono));
+};
+
+
+onMount(()=>{
+  const tema =  document.getElementById('temah');
+  tema.play()
+})
+
+const gestisciMusica = () => {
+  const tema = document.getElementById('temah');
+  const audioScelta = document.getElementById('scelta');
+  if (!suono){
+    audioScelta.volume = 0
+  }
+  if (!musica) {
+    tema.play();
+    musica = true
+  audioScelta.play()
+  audioScelta.currentTime = 0
+  } else {
+    tema.pause();
+    musica = false
+  audioScelta.play()
+  audioScelta.currentTime = 0
+  }
   localStorage.setItem('musica', JSON.stringify(musica))
-  localStorage.setItem('suono', JSON.stringify(suono))
-}
-
-
+};
 
 
   let test = new Date()
