@@ -6,9 +6,9 @@
 </div>
 
 <div class='flex w-[100%] justify-center absolute top-[10%] 2xl:top-[20%]'>
-  <div class="bg-gradient-to-t  h-[550px] md:h-[700px] w-[95%] md:w-[80%] lg:w-[60%] 2xl:w-[40%] rounded-2xl {incognito ? "from-neutral-900 to-neutral-950 border-2 border-neutral-600": "from-slate-900 to-slate-950 border-2 border-slate-600" && demone ? "to-red-900 from-neutral-950 border-2 border-red-600": "from-slate-900 to-slate-950 border-2 border-slate-600"}">
+  <div class="bg-gradient-to-t  h-[550px] md:h-[700px] w-[95%] md:w-[80%] lg:w-[70%] 2xl:w-[50%] rounded-2xl {incognito ? "from-neutral-900 to-neutral-950 border-2 border-neutral-600": "from-slate-900 to-slate-950 border-2 border-slate-600" && demone ? "to-red-900 from-neutral-950 border-2 border-red-600": "from-slate-900 to-slate-950 border-2 border-slate-600"}">
     <div class="flex justify-center w-[100%] h-full relative overflow-hidden">
-      <img src={sfondo} class="object-cover w-full h-full sfo rounded-2xl opacity-35 {incognito ? "saturate-0":""} absolute" />
+      <img src={sfondo} class="object-cover w-full h-full sfo rounded-2xl opacity-55 {incognito ? "saturate-0":""} absolute" />
       <img src={layla} alt="layla" class=" sfoca2 absolute tran {start ? "w-[450px] md:w-[550px] lg:w-[600px] 2xl:w-[650px]":"w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px]"}"/>
     </div>
 
@@ -22,22 +22,22 @@
     <audio src={starta} id='starta' />
 
     <div class="justify-center w-[100%] sfoca2 relative top-[-250px] {start ? "flex":"hidden"}">
-    <button on:click={()=>inizia()} class=" text-white font-thin bg-gradient-to-t flex from-violet-900 border-b-2 border-violet-600 rounded-xl p-2 pr-4 pl-4 text-xl pulsa2">Clicca / tocca per iniziare</button>
+    <button on:click={()=>inizia()} class=" text-white font-thin bg-gradient-to-t flex from-violet-900 border-b-2 border-violet-600 rounded-xl p-2 pr-8 pl-8 text-xl pulsa2">Clicca / tocca per iniziare</button>
     </div>
 
   
    <div class="justify-center w-[100%] sfoca2 relative top-[-450px] {start ? "hidden":"flex"}">
-    <div class="bg-gradient-to-t opacity-95 {incognito ? "from-neutral-800 to-neutral-950 border-2 border-neutral-800":" from-pink-900 to-pink-950 border-2 border-pink-900" && demone ? "from-neutral-900 to-neutral-950 border-2 border-neutral-900":" from-pink-900 to-pink-950 border-2 border-pink-900"}  rounded-xl flex items-center justify-center w-[95%] h-[300px]">
+    <div class="bg-gradient-to-t opacity-95 {incognito ? "from-transparent to-transparent border-2 border-transparent":" from-transparent to-transparent " && demone ? "from-transparent to-transparent border-2 border-transparent":" from-transparent to-transparent "}  rounded-xl flex items-center justify-center w-[95%] h-[300px]">
       
-      <div class="{crediti ? "hidden" : "grid"} {opzioni ? "hidden": "grid"} {nuova ? "hidden": "grid"} {cont2 ? "hidden": "grid"}  w-[95%] h-[280px] border-2 {incognito ? "border-neutral-800":"border-pink-900" && demone ? "border-red-800":"border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-4 gap-8 p-3 justify-center justify-items-center">
-      <button on:click="{()=>apriMenu('cont')}" disabled={cont} class="{cont ? "opacity-20 cursor-not-allowed": ""} text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Continua Partita</button>
-      <button on:click="{()=>apriMenu('nuova')}" class="text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Nuova Partita</button>
-      <button on:click="{()=>apriMenu('opzioni')}" class=" text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Opzioni</button>
-      <button on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Crediti</button>
+      <div class="{crediti ? "hidden" : "grid"} {opzioni ? "hidden": "grid"} {nuova ? "hidden": "grid"} {cont2 ? "hidden": "grid"}  w-[95%] sm:w-[80%] 2xl:w-[80%] h-[280px] border-t-4 {incognito ? "border-neutral-800":"border-pink-900" && demone ? "border-red-800":"border-pink-900"} bg-gradient-to-t from-transparent to-black bg-opacity-80 rounded-2xl grid-cols-1 grid-rows-4 gap-6 p-3 justify-center justify-items-center">
+      <button on:click="{()=>apriMenu('cont')}" disabled={cont} class="{cont ? "opacity-20 cursor-not-allowed": ""} text-white monst flex items-center cursor-pointer justify-center w-[80%] sm:w-[80%] 2xl:w-[90%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Continua Partita</button>
+      <button on:click="{()=>apriMenu('nuova')}" class="text-white monst flex items-center cursor-pointer justify-center w-[80%] sm:w-[80%] 2xl:w-[90%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Nuova Partita</button>
+      <button on:click="{()=>apriMenu('opzioni')}" class=" text-white monst flex items-center cursor-pointer justify-center w-[80%] sm:w-[80%] 2xl:w-[90%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Opzioni</button>
+      <button on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[80%] sm:w-[80%] 2xl:w-[90%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Crediti</button>
      
     </div>
 
-      <div class="sfoca {crediti ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-5 gap-8 p-3 justify-center justify-items-center">
+      <div class="sfoca {crediti ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-t-4 border-neutral-900":"border-t-4 border-pink-900" && demone ? "border-t-4 border-red-900":"border-t-4 border-pink-900"} bg-gradient-to-t from-neutral-900 to-black bg-opacity-80 rounded-2xl  grid-cols-1 grid-rows-5 gap-8 p-3 justify-center justify-items-center">
         <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce text-center w-[60%] top-[20px]">Gioco ideato e sviluppato da Alessio Santillo</p>
         <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce text-center w-[60%] top-[20px]">Immagini create da Copilot</p>
         <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce text-center w-[60%] top-[20px]">Icone create da Flaticon</p>
@@ -45,7 +45,7 @@
         <button on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[80%] h-[50px] relative top-[82px] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Torna al menu principale</button>
       </div>
 
-      <div class="sfoca {opzioni ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-2 grid-rows-3 gap-3 gap-y-[130px]  p-3 justify-center justify-items-center">
+      <div class="sfoca {opzioni ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-t-4 border-neutral-900":"border-t-4 border-pink-900" && demone ? "border-t-4 border-red-900":"border-t-4 border-pink-900"} bg-gradient-to-t from-neutral-900 to-black bg-opacity-80 rounded-2xl  grid-cols-2 grid-rows-3 gap-3 gap-y-[130px]  p-3 justify-center justify-items-center">
         <button on:click="{()=>cambiaMode('inc')}" class="{incognito ? "border-b-4 rounded-[50px] md:rounded-full":"border-b-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-neutral-950 to-transparent  border-neutral-700  hover:border-neutral-300">
           <img src="{inc}" alt="layla" class="w-[60px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Layla Noir</p>
@@ -66,9 +66,9 @@
         <button on:click="{()=>apriMenu('opzioni')}" class="text-white monst flex items-center cursor-pointer col-span-2 justify-center w-[80%] h-[50px] relative top-[50px] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Torna al menu principale</button>
       </div>
 
-      <div class="{nuova ? "grid": "hidden"}  sfoca w-[100%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
+      <div class="{nuova ? "grid": "hidden"}  sfoca w-[100%] h-[280px] {incognito ? "border-t-4 border-neutral-900":"border-t-4 border-pink-900" && demone ? "border-t-4 border-red-900":"border-t-4 border-pink-900"} bg-gradient-to-t from-neutral-900 to-black bg-opacity-80 rounded-2xl  grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
         <div class="{caricamento ? "hidden": "flex"} {caricamento2 ? "hidden": "flex"} {latrama ? "hidden": "flex"} justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
-          <p class=" sfoca2 monst text-white text-[10px] md:text-sm font-bold relative top-[-18px] text-justify flex justify-start ">Benvenuto su Undead Layla! per cominciare, inserisci il tuo nome di merda, muoviti:</p>
+          <p class=" sfoca2 monst text-white text-[10px] md:text-sm font-bold relative top-[-18px] text-justify flex justify-start ">Benvenuto su Undead Layla! Prima di cominciare, inserisci il tuo nome:</p>
           <div class="flex justify-center items-center w-[100%] top-[35px] relative flex-col" >
             <input on:change="{Entra}" placeholder="Inserisci il tuo lurido nome qui..." bind:value="{nome}" class="rounded-xl outline-none w-[300px] p-3 mb-2" maxlength="30"/>
             <button on:click="{()=>salvaNome()}" class='text-white font-semibold rounded-xl p-2 bg-gradient-to-t from-green-950 to-green-600 border-2 border-green-600 hover:from-teal-950 hover:to-teal-600 hover:border-teal-600 w-[300px]'>Fatto</button>
@@ -90,10 +90,10 @@
 
          
 
-        <div class="{cont2 ? "grid": "hidden"}  sfoca w-[100%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
+        <div class="{cont2 ? "grid": "hidden"}  sfoca w-[100%] h-[280px] {incognito ? "border-t-4 border-neutral-900":"border-t-4 border-pink-900" && demone ? "border-t-4 border-red-900":"border-t-4 border-pink-900"} bg-gradient-to-t from-neutral-900 to-black bg-opacity-80 rounded-2xl  grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
        
           <div class="{latrama2 ? "flex": "hidden"} justify-start w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
-            <p class=" sfoca2 monst text-white text-sm font-bold relative top-[5px] text-justify flex justify-start ">{trama}</p>
+            <p id="ty" class=" sfoca2 monst text-white text-sm font-bold relative top-[5px] text-justify flex justify-start ">{trama}</p>
           </div>
   
           <p class="{caricamento2 ? "visible": "invisible"}  sfoca monst text-white font-bold absolute top-[100px] pulsa">Caricamento...</p>
@@ -138,7 +138,7 @@
   import amb from './effetti/ambient.mp3'
   import starta  from './effetti/start.wav'
   import sfondo from './imma/OIG.jpg'
-
+import { writable } from 'svelte/store'
 
   let nome = ''
   let latrama = false
@@ -146,13 +146,14 @@
   let salvata = false
   let salvata2 = false
 
-    onMount(()=>{
-      if (typeof window !== 'undefined'){
+    onMount(async ()=>{
+      if (typeof localStorage !== 'undefined'){
       const sNome = localStorage.getItem('nome') 
     if (sNome){
       nome = JSON.parse(sNome)
     }
   }})
+
 
   const salvaNome=()=>{
     const audioMain = new Audio(main);
@@ -161,19 +162,11 @@
     }
    audioMain.currentTime = 0
     audioMain.play()
-
       latrama = true
       latrama2 = true
       salvata = true
       salvata2 = true
       localStorage.setItem('nome', JSON.stringify(nome))
-      if (typeof window !== 'undefined'){
-      const sNome = localStorage.getItem('nome') 
-    if (sNome){
-      nome = JSON.parse(sNome)
-    }
-  }
-  
   setTimeout(()=>{
     blocca = false
   }, 700)
@@ -184,34 +177,36 @@
       salvaNome()
     }
   }
- 
 
-  const usanome = 'Benvenuto' + nome + '\n Sei pronto ad aiutarmi nella mia avventura? Mi raccomando rispondi di si!'
+
+  let nomee = nome
+  let usanome = `Benvenuto ${String(nome)}\nSei pronto ad aiutarmi nella mia avventura? Mi raccomando rispondi di sì!`;
+
+  console.log(nomee)
 
 
   const storia = {
 	intro:{text: usanome,
-  ris:['Certo', 'Ue ciccia, ho da fare'],
+  ris:['Certo, ti aiuterò!', 'Scusa, non credo di essere ancora pronto'],
   nextLev: ['start', 'end']},
 
-  start:{ text:'Bene allora cominciamo',
-          ris:['ok', ''],
+  start:{ text:'Ahh ti ringrazio! oh aspetta ti mando i dati con tutte le informazioni riguardante cio che sta accadendo.... *invio dati*',
+          ris:['Andiamo!', ''],
           nextLev: ['inizio']},
 
-  end:{  text:'Ma vaffanculo allora, ti muzzico tutti i fili della casa!',
-         ris:['E io chiamo Zborro!', ''],
-         nextLev: ['bho']},
+  end:{  text:'Sei sicuro? ho davvero bisogno del tuo aiuto... il mio comunicatore è stato in grado di raggiungere solo il tuo segnale dopo ore e ore di tentativi... Davvero non vuoi darmi una mano?',
+         ris:['Eh va bene :)', 'Daccordo, dimmi pure di cosa hai bisogno'],
+         nextLev: ['bho', 'bho']},
 
-         inizio : { text: 'testo di prova',
-         ris: ['ciao', 'ciao'],
-         nextLev:['si']},
+         inizio : { text: 'Primo Capitolo: La Città Glitchata...',
+         ris: ['Continua', 'Inizia'],
+         nextLev:['si', 'si']},
 
-         bho: {text: 'ciao stronzo',
-        ris:['be', 'fd'],
-      nextLev: ['fdfs']}
+         bho: {text: 'Ti ringrazio! Lascia solo che ti mandi il breafing con tutti i dati di ciò che sta accadendo..... *invio dati*',
+        ris:['Perfetto', ''],
+      nextLev: ['inizio']}
   
 };
-  
 
 let trama;
 let risp = ''
@@ -239,28 +234,38 @@ const newGame=()=>{
     case 'risp':
       audioScelta.play()
       audioScelta.currentTime = 0
+      setTimeout(()=>{
       nextLevel = storia[nextLevel].nextLev[0]
       trama = storia[nextLevel].text
    risp = storia[nextLevel].ris[0]
    risp1 = storia[nextLevel].ris[1]
    console.log(trama)
+   if (risp1 === ''){
+    blocca2 = true
+   } else{
+    blocca2 = false
+   }
+      }, 1000)
       break;
       case 'risp1':
       audioScelta.play()
       audioScelta.currentTime = 0
+      setTimeout(()=>{
       nextLevel = storia[nextLevel].nextLev[1]
       trama = storia[nextLevel].text
    risp = storia[nextLevel].ris[0]
    risp1 = storia[nextLevel].ris[1]
    console.log(trama)
+   if (risp1 === ''){
+    blocca2 = true
+   } else{
+    blocca2 = false
+   }
+  }, 1000)
       break;
       default:
         break;
    }
-   if (risp1 === ''){
-    blocca2 = true
-   }
-   
   }
 
 
