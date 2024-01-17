@@ -9,18 +9,24 @@
   <div class="bg-gradient-to-t  h-[550px] md:h-[700px] w-[95%] md:w-[80%] lg:w-[60%] 2xl:w-[40%] rounded-2xl {incognito ? "from-neutral-900 to-neutral-950 border-2 border-neutral-600": "from-slate-900 to-slate-950 border-2 border-slate-600" && demone ? "to-red-900 from-neutral-950 border-2 border-red-600": "from-slate-900 to-slate-950 border-2 border-slate-600"}">
     <div class="flex justify-center w-[100%] h-full relative overflow-hidden">
       <img src={sfondo} class="object-cover w-full h-full sfo rounded-2xl opacity-35 {incognito ? "saturate-0":""} absolute" />
-      <img src={layla} alt="layla" class="w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px] sfoca2 absolute"/>
+      <img src={layla} alt="layla" class=" sfoca2 absolute tran {start ? "w-[450px] md:w-[550px] lg:w-[600px] 2xl:w-[650px]":"w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px]"}"/>
     </div>
 
     <audio src={theme} id='temah' autoplay loop />
+    <audio src={amb} id='amb' loop />
     <audio src={main} id='main' />
     <audio src={saving} id='saving' />
     <audio src={scelta} id='scelta' />
     <audio src={gameover} id='gameover' />
     <audio src={torna} id='torna' />
+    <audio src={starta} id='starta' />
+
+    <div class="justify-center w-[100%] sfoca2 relative top-[-250px] {start ? "flex":"hidden"}">
+    <button on:click={()=>inizia()} class=" text-white font-thin bg-gradient-to-t flex from-violet-900 border-b-2 border-violet-600 rounded-xl p-2 pr-4 pl-4 text-xl pulsa2">Clicca / tocca per iniziare</button>
+    </div>
 
   
-   <div class="flex justify-center w-[100%] sfoca2 relative top-[-450px]">
+   <div class="justify-center w-[100%] sfoca2 relative top-[-450px] {start ? "hidden":"flex"}">
     <div class="bg-gradient-to-t opacity-95 {incognito ? "from-neutral-800 to-neutral-950 border-2 border-neutral-800":" from-pink-900 to-pink-950 border-2 border-pink-900" && demone ? "from-neutral-900 to-neutral-950 border-2 border-neutral-900":" from-pink-900 to-pink-950 border-2 border-pink-900"}  rounded-xl flex items-center justify-center w-[95%] h-[300px]">
       
       <div class="{crediti ? "hidden" : "grid"} {opzioni ? "hidden": "grid"} {nuova ? "hidden": "grid"} {cont2 ? "hidden": "grid"}  w-[95%] h-[280px] border-2 {incognito ? "border-neutral-800":"border-pink-900" && demone ? "border-red-800":"border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-4 gap-8 p-3 justify-center justify-items-center">
@@ -31,7 +37,7 @@
      
     </div>
 
-      <div class="{crediti ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-5 gap-8 p-3 justify-center justify-items-center">
+      <div class="sfoca {crediti ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-5 gap-8 p-3 justify-center justify-items-center">
         <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce text-center w-[60%] top-[20px]">Gioco ideato e sviluppato da Alessio Santillo</p>
         <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce text-center w-[60%] top-[20px]">Immagini create da Copilot</p>
         <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce text-center w-[60%] top-[20px]">Icone create da Flaticon</p>
@@ -39,7 +45,7 @@
         <button on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[80%] h-[50px] relative top-[82px] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Torna al menu principale</button>
       </div>
 
-      <div class="{opzioni ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-2 grid-rows-3 gap-3 gap-y-[130px]  p-3 justify-center justify-items-center">
+      <div class="sfoca {opzioni ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-2 grid-rows-3 gap-3 gap-y-[130px]  p-3 justify-center justify-items-center">
         <button on:click="{()=>cambiaMode('inc')}" class="{incognito ? "border-b-4 rounded-[50px] md:rounded-full":"border-b-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-neutral-950 to-transparent  border-neutral-700  hover:border-neutral-300">
           <img src="{inc}" alt="layla" class="w-[60px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Layla Noir</p>
@@ -129,18 +135,10 @@
   import scelta from './effetti/scelta.wav';
   import torna from './effetti/tornaback.wav';
   import theme from './effetti/theme.mp3'
+  import amb from './effetti/ambient.mp3'
+  import starta  from './effetti/start.wav'
   import sfondo from './imma/OIG.jpg'
 
-/*
-  onMount(()=>{
-    const tema = new Audio(theme)
-    document.addEventListener('click', () => {
-    tema.play();
-  });
-    tema.play()
-   
-  })
-*/
 
   let nome = ''
   let latrama = false
@@ -352,6 +350,18 @@ const continuaGame=()=>{
   }
 
 
+  let start = true
+
+  const inizia=()=>{
+    const star = new Audio(starta)
+    star.play()
+    if (start){
+      setTimeout(()=>{
+      start = false
+      }, 700)
+    }
+  }
+
 
   let crediti = false
   let opzioni = false
@@ -364,6 +374,8 @@ const continuaGame=()=>{
   const apriMenu=(menu)=>{
 const audioTorna = new Audio(torna);
 const audioMain = new Audio(main);
+const tema = document.getElementById('temah')
+const audioAmb = document.getElementById('amb')
 if (!suono){
   audioMain.volume = 0
   audioTorna.volume = 0
@@ -410,6 +422,9 @@ if (!suono){
       blocca = true
       latrama = false
       salvata = false
+      tema.volume = 1
+      audioAmb.volume = 0
+      tema.currentTime = 0
     }, 600)
       }
       break;
@@ -417,6 +432,7 @@ if (!suono){
     if (!nuova){ 
       audioMain.currentTime = 0
         audioMain.play()
+        tema.volume = 0
       setTimeout(()=>{
         newGame()
         cont = true
@@ -435,6 +451,9 @@ if (!suono){
       cont2 = false
       crediti = false
       blocca = true
+      audioAmb.play()
+      audioAmb.currentTime = 0
+      audioAmb.volume = 1
       }, 5000)
     } else{
       nuova = false
@@ -443,6 +462,12 @@ if (!suono){
     }break;
       case 'cont':
       salvaNome()
+      setTimeout(()=>{
+      audioAmb.play()
+      audioAmb.currentTime = 0
+      audioAmb.volume = 1
+      }, 1000)
+      tema.volume = 0
       if (cont2){ 
         audioMain.currentTime = 0
         audioMain.play()
@@ -582,6 +607,7 @@ onMount(()=>{
 
 const gestisciMusica = () => {
   const tema = document.getElementById('temah');
+  const audioAmb = document.getElementById('amb')
   const audioScelta = document.getElementById('scelta');
   if (!suono){
     audioScelta.volume = 0
@@ -592,6 +618,7 @@ const gestisciMusica = () => {
   audioScelta.play()
   audioScelta.currentTime = 0
   } else {
+    audioAmb.volume = 0
     tema.pause();
     musica = false
   audioScelta.play()
@@ -666,6 +693,7 @@ frasiRandom()
 
 <style>
 
+
  .sfo{
   animation: 20s infinite alternate-reverse sfon;
  }
@@ -700,6 +728,14 @@ frasiRandom()
     animation: infinite 0.5s alternate-reverse puls;
   }
   @keyframes puls {
+    from {opacity: 0.2; }
+    to {opacity: 1;}
+  }
+
+  .pulsa2{
+    animation: infinite 1s alternate-reverse puls2;
+  }
+  @keyframes puls2 {
     from {opacity: 0.2; }
     to {opacity: 1;}
   }
