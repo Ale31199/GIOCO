@@ -7,12 +7,14 @@
 
 <div class='flex w-[100%] justify-center absolute top-[10%] 2xl:top-[20%]'>
   <div class="bg-gradient-to-t  h-[550px] md:h-[700px] w-[95%] md:w-[80%] lg:w-[60%] 2xl:w-[40%] rounded-2xl {incognito ? "from-neutral-900 to-neutral-950 border-2 border-neutral-600": "from-slate-900 to-slate-950 border-2 border-slate-600" && demone ? "to-red-900 from-neutral-950 border-2 border-red-600": "from-slate-900 to-slate-950 border-2 border-slate-600"}">
-    <div class="flex justify-center w-[100%]">
-      <img src={layla} alt="layla" class="w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px] sfoca2"/>
+    <div class="flex justify-center w-[100%] h-full relative overflow-hidden">
+      <img src={sfondo} class="object-cover w-full h-full sfo rounded-2xl opacity-35 {incognito ? "saturate-0":""} absolute" />
+      <img src={layla} alt="layla" class="w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px] sfoca2 absolute"/>
     </div>
   
-   <div class="flex justify-center w-[100%] sfoca2">
-    <div class="bg-gradient-to-t {incognito ? "from-neutral-800 to-neutral-950 border-2 border-neutral-800":" from-pink-900 to-pink-950 border-2 border-pink-900" && demone ? "from-neutral-900 to-neutral-950 border-2 border-neutral-900":" from-pink-900 to-pink-950 border-2 border-pink-900"}  rounded-xl flex items-center justify-center w-[95%] h-[300px]">
+   <div class="flex justify-center w-[100%] sfoca2 relative top-[-450px]">
+    <div class="bg-gradient-to-t opacity-95 {incognito ? "from-neutral-800 to-neutral-950 border-2 border-neutral-800":" from-pink-900 to-pink-950 border-2 border-pink-900" && demone ? "from-neutral-900 to-neutral-950 border-2 border-neutral-900":" from-pink-900 to-pink-950 border-2 border-pink-900"}  rounded-xl flex items-center justify-center w-[95%] h-[300px]">
+      
       <div class="{crediti ? "hidden" : "grid"} {opzioni ? "hidden": "grid"} {nuova ? "hidden": "grid"} {cont2 ? "hidden": "grid"}  w-[95%] h-[280px] border-2 {incognito ? "border-neutral-800":"border-pink-900" && demone ? "border-red-800":"border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-4 gap-8 p-3 justify-center justify-items-center">
       <button on:click="{()=>apriMenu('cont')}" disabled={cont} class="{cont ? "opacity-20 cursor-not-allowed": ""} text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Continua Partita</button>
       <button on:click="{()=>apriMenu('nuova')}" class="text-white monst flex items-center cursor-pointer justify-center w-[60%] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Nuova Partita</button>
@@ -21,26 +23,29 @@
      
     </div>
 
-      <div class="{crediti ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
-        <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce top-[100px]">Gioco ideato e sviluppato da Alessio Santillo</p>
-        <button on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[80%] h-[50px] relative top-[30px] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Torna al menu principale</button>
+      <div class="{crediti ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-1 grid-rows-5 gap-8 p-3 justify-center justify-items-center">
+        <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce text-center w-[60%] top-[20px]">Gioco ideato e sviluppato da Alessio Santillo</p>
+        <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce text-center w-[60%] top-[20px]">Immagini create da Copilot</p>
+        <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce text-center w-[60%] top-[20px]">Icone create da Flaticon</p>
+        <p class="monst text-white text-[10px] md:text-sm font-bold relative animate-bounce text-center w-[60%] top-[20px]">Main Theme 'Dust to Dust' rubata a Quixotic</p>
+        <button on:click="{()=>apriMenu('crediti')}" class="text-white monst flex items-center cursor-pointer justify-center w-[80%] h-[50px] relative top-[82px] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Torna al menu principale</button>
       </div>
 
       <div class="{opzioni ? "grid": "hidden"}  w-[95%] h-[280px] {incognito ? "border-2 border-neutral-900":"border-2 border-pink-900" && demone ? "border-2 border-red-900":"border-2 border-pink-900"} bg-black bg-opacity-70 rounded-lg grid-cols-2 grid-rows-3 gap-3 gap-y-[130px]  p-3 justify-center justify-items-center">
-        <button on:click="{()=>cambiaMode('inc')}" class="{incognito ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-neutral-950 to-neutral-700  border-neutral-700  hover:border-neutral-300">
-          <img src="{inc}" alt="layla" class="w-[70px] invert" />
+        <button on:click="{()=>cambiaMode('inc')}" class="{incognito ? "border-4 rounded-[50px] md:rounded-full":"border-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-neutral-950 to-neutral-700  border-neutral-700  hover:border-neutral-300">
+          <img src="{inc}" alt="layla" class="w-[60px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Layla Noir</p>
         </button>
-        <button on:click="{()=>cambiaMode('demon')}"  class="{demone ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-red-950 to-red-700 border-red-700 hover:border-neutral-300">
-          <img src="{demon}" alt="layla" class="w-[70px] mb-1" />
+        <button on:click="{()=>cambiaMode('demon')}"  class="{demone ? "border-4 rounded-[50px] md:rounded-full":"border-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-red-950 to-red-700 border-red-700 hover:border-neutral-300">
+          <img src="{demon}" alt="layla" class="w-[60px] mb-1" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Layla Demon</p>
         </button>
-        <button on:click="{()=>gestisciSuono('musica')}" class="{musica ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-green-950 to-green-700  border-green-700 hover:border-neutral-300">
-          <img src="{music}" alt="layla" class="w-[70px] invert" />
+        <button on:click="{()=>gestisciSuono('musica')}" class="{musica ? "border-4 rounded-[50px] md:rounded-full":"border-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-green-950 to-green-700  border-green-700 hover:border-neutral-300">
+          <img src="{music}" alt="layla" class="w-[60px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Music</p>
         </button>
-        <button on:click="{()=>gestisciSuono('suono')}" class="{suono ? "border-4 rounded-full":"border-2 rounded-2xl"} flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-violet-950 to-violet-700  border-violet-700 hover:border-neutral-300">
-          <img src="{volume}" alt="layla" class="w-[70px] invert" />
+        <button on:click="{()=>gestisciSuono('suono')}" class="{suono ? "border-4 rounded-[50px] md:rounded-full":"border-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-violet-950 to-violet-700  border-violet-700 hover:border-neutral-300">
+          <img src="{volumeh}" alt="layla" class="w-[60px] invert" />
           <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px]">Sound Effects</p>
         </button>
         
@@ -89,7 +94,7 @@
     </div>
    </div>
 
-   <div class="flex flex-col w-[100%] relative top-[3%] items-center justify-center">
+   <div class="flex flex-col w-[100%] relative top-[-430px] items-center justify-center">
     <button on:click="{()=>gioca('risp')}" disabled={blocca} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2  bg-gradient-to-b {incognito ? "from-neutral-950  to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} text-white font-semibold">{risp}</button>
     <button on:click="{()=>gioca('risp1')}" disabled={blocca || blocca2} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} {blocca2 ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px]  monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} text-white font-semibold">{risp1}</button>
   </div>
@@ -115,8 +120,19 @@
   import saving from './effetti/saving.wav';
   import scelta from './effetti/scelta.wav';
   import torna from './effetti/tornaback.wav';
+  import theme from './effetti/theme.mp3'
+  import sfondo from './imma/OIG.jpg'
 
-
+/*
+  onMount(()=>{
+    const tema = new Audio(theme)
+    document.addEventListener('click', () => {
+    tema.play();
+  });
+    tema.play()
+   
+  })
+*/
 
   let nome = ''
   let latrama = false
@@ -451,7 +467,7 @@ const audioMain = new Audio(main);
     const salvaDem = localStorage.getItem('demone')
     const salvaMus = localStorage.getItem('musica')
     const salvaSuo = localStorage.getItem('suono')
-    const salvaMut = localStorage.getItem('volume')
+    const salvaMut = localStorage.getItem('volumeh')
     if (salvaInc){
       incognito = JSON.parse(salvaInc)
     }
@@ -465,7 +481,7 @@ const audioMain = new Audio(main);
       suono = JSON.parse(salvaSuo)
     }
     if (salvaMut){
-    volume = JSON.parse(salvaMut)
+    volumeh = JSON.parse(salvaMut)
     }
     }
   })
@@ -512,17 +528,31 @@ const audioScelta = new Audio(scelta);
 
  let musica = true
  let suono = true
- let volume = vol
+ let volumeh = vol
+
+/* 
+ onMount(()=>{
+      const tema = new Audio(theme);
+      tema.play();
+      tema.loop = true
+  });
+*/
+ 
+
 
 const gestisciSuono=(opt)=>{
   switch(opt){
  case 'musica':
+  const tema = new Audio(theme)
  if (musica){
 const audioScelta = new Audio(scelta);
+  
   audioScelta.play()
   audioScelta.currentTime = 0
   musica = false
  }else{
+  const tema = new Audio(theme)
+  tema.pause()
 const audioScelta = new Audio(scelta);
   audioScelta.play()
   audioScelta.currentTime = 0
@@ -530,41 +560,35 @@ const audioScelta = new Audio(scelta);
  }
  break;
  case 'suono':
- if (suono){
-const audioScelta = new Audio(scelta);
+ const audioScelta = new Audio(scelta);
 const audioMain = new Audio(main)
 const audioOver = new Audio(gameover)
 const audioSaving = new Audio(saving)
 const audioTorna = new Audio(torna)
-
-  audioScelta.volume = 0
-  audioMain.volume = 0
-  audioOver.volume = 0
-  audioSaving.volume = 0
-  audioTorna.volume = 0
+ if (suono){
+  audioScelta.muted = true
+  audioMain.muted = true
+  audioOver.muted = true
+  audioSaving.muted = true
+  audioTorna.muted = true
   audioScelta.currentTime = 0
   audioScelta.play()
   suono = false
-  volume =mute
+  volumeh = mute
  }else{
-const audioScelta = new Audio(scelta);
-const audioMain = new Audio(main)
-const audioOver = new Audio(gameover)
-const audioSaving = new Audio(saving)
-const audioTorna = new Audio(torna)
   audioScelta.currentTime = 0
   audioScelta.play()
   suono = true
-  audioScelta.volume = 1
-  audioMain.volume = 1
-  audioOver.volume = 1
-  audioSaving.volume = 1
-  audioTorna.volume = 1
-  volume =vol
+  audioScelta.muted = false
+  audioMain.muted = false
+  audioOver.muted = false
+  audioSaving.muted = false
+  audioTorna.muted = false
+  volumeh = vol
  }
  break;
   }
-  localStorage.setItem('volume', JSON.stringify(volume))
+  localStorage.setItem('volumeh', JSON.stringify(volumeh))
   localStorage.setItem('musica', JSON.stringify(musica))
   localStorage.setItem('suono', JSON.stringify(suono))
 }
@@ -595,17 +619,18 @@ onMount(()=>{
   }
 })
 
+
 const salutoTempo=()=>{
   let time = test.getHours()
     if (typeof window !== 'undefined'){
     if (time === 5 || time === 6 || time === 7 || time === 8 || time === 9 || time === 10 || time === 11 || time === 12){
-    salutiTime = 'Buon Porcogiorno'
+    salutiTime = 'Buongiorno'
   }else if (time === 13 || time === 14 || time === 15 || time === 16 || time === 17 || time === 18){
-   salutiTime = 'Buon Porcheriggio'
+   salutiTime = 'Buon Pomeriggio'
   }else if (time === 19 || time === 20 || time === 21 || time === 22 || time === 23){
-   salutiTime = 'Buona Porcasera'
+   salutiTime = 'Buona Sera'
   }else if (time === 0 || time === 1 || time === 2 || time === 3 || time === 4){
-   salutiTime = 'Buona Porcanotte'
+   salutiTime = 'Buona Notte'
   }
   localStorage.setItem('salutiTime', JSON.stringify(salutiTime))
 }
@@ -635,6 +660,19 @@ frasiRandom()
 
 
 <style>
+
+ .sfo{
+  animation: 20s infinite alternate-reverse sfon;
+ }
+ @keyframes sfon {
+  0%{scale: 100%;}
+  100%{scale: 130%;}
+  
+ }
+
+  .tran{
+    transition: 1s;
+  }
   .sfoca{
     animation: 1s forwards sfoc;
     opacity: 0;
