@@ -82,7 +82,7 @@
         <div class="{caricamento ? "hidden": "flex"} {caricamento2 ? "hidden": "flex"} {latrama ? "hidden": "flex"} justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
           <p class=" sfoca2 monst text-white text-[10px] md:text-sm font-bold relative top-[-18px] text-justify flex justify-start ">Benvenuto su Undead Layla! Prima di cominciare, inserisci il tuo nome:</p>
           <div class="flex justify-center items-center w-[100%] top-[35px] relative flex-col" >
-            <input on:change="{Entra}" placeholder="Inserisci il tuo lurido nome qui..." bind:value="{nome}" class="rounded-xl outline-none w-[300px] p-3 mb-2" maxlength="30"/>
+            <input on:input="{vediNome}" on:change="{Entra}" placeholder="Inserisci il tuo lurido nome qui..." bind:value="{nome}" class="rounded-xl outline-none w-[300px] p-3 mb-2" maxlength="30"/>
             <button id='ins' on:click="{()=>salvaNome()}" class='text-white font-semibold rounded-xl p-2 bg-gradient-to-t from-green-950 to-green-600 border-2 border-green-600 hover:from-teal-950 hover:to-teal-600 hover:border-teal-600 w-[300px]'>Fatto</button>
           </div>
         </div>
@@ -175,6 +175,11 @@ import { writable } from 'svelte/store'
   caricaNome()
   */
 
+ const vediNome=()=>{
+  const ilmionome = localStorage.getItem('nome')
+  nome = ilmionome
+ }
+
   const salvaNome=()=>{
     if (typeof window !== 'undefined'){
       const ins = document.getElementById('ins')
@@ -197,7 +202,7 @@ import { writable } from 'svelte/store'
       latrama2 = true
       salvata = true
       salvata2 = true
-      localStorage.setItem('nome', JSON.stringify(nome))
+      localStorage.setItem('nome', nome)
       nome = ''
       console.log(nome)
   setTimeout(()=>{
@@ -238,7 +243,7 @@ import { writable } from 'svelte/store'
 };
 
 
-console.log(nome)
+  console.log(name)
   console.log(storia.intro.text)
 
 
@@ -415,16 +420,16 @@ confermare()
     const salvaBlocca = localStorage.getItem('blocca2')
 
     if (salvaTrama){
-      trama = JSON.parse(salvaTrama)
+      trama = salvaTrama
     }
     if (salvaRisp){
-      risp = JSON.parse(salvaRisp)
+      risp = salvaRisp
     }
     if (salvaRisp1){
-      risp1 = JSON.parse(salvaRisp1)
+      risp1 = salvaRisp1
     }
     if (salvaLev){
-      nextLevel = JSON.parse(salvaLev)
+      nextLevel = salvaLev
     }
     if (salvaCont){
       cont = JSON.parse(salvaCont)
@@ -474,10 +479,10 @@ const continuaGame=()=>{
     cont = false
     localStorage.setItem('blocca2', JSON.stringify(blocca2))
     localStorage.setItem('cont', JSON.stringify(cont))
-    localStorage.setItem('trama', JSON.stringify(trama));
-    localStorage.setItem('risp', JSON.stringify(risp));
-    localStorage.setItem('risp1', JSON.stringify(risp1));
-    localStorage.setItem('nextLevel', JSON.stringify(nextLevel));
+    localStorage.setItem('trama', trama);
+    localStorage.setItem('risp', risp);
+    localStorage.setItem('risp1', risp1);
+    localStorage.setItem('nextLevel', nextLevel);
   }
 
 
