@@ -535,12 +535,8 @@ const audioAmb = document.getElementById('amb')
           audioTorna.volume = 1
         }
     if (!crediti){
-      const cr = document.getElementById('cr')
-      cr.addEventListener('click', ()=>{
-      const tema = document.getElementById('temah')
       tema.play()
       tema.volume = 1
-     })
       audioMain.currentTime = 0
         audioMain.play()
       setTimeout(()=>{
@@ -569,12 +565,8 @@ const audioAmb = document.getElementById('amb')
           audioTorna.volume = 1
         }
     if (!opzioni){
-      const op = document.getElementById('op')
-     op.addEventListener('click', ()=>{
-      const tema = document.getElementById('temah')
       tema.play()
       tema.volume = 1
-     })
       audioMain.currentTime = 0
         audioMain.play()
       setTimeout(()=>{
