@@ -376,6 +376,8 @@ const confermareNuova=(opzione)=>{
   audioTorna.play()
   if (conferma){
   setTimeout(()=>{
+    tema.play()
+    tema.volume = 1
     nuova = false
     conferma = false
   cont = false
@@ -509,10 +511,12 @@ const continuaGame=()=>{
           audioMain.volume = 1
           tema.volume = 1
         }*/
+
+      
  
   const apriMenu=(menu)=>{
 const audioMain = new Audio(main)
-const audioTorna = document.getElementById('torna')
+const audioTorna = new Audio(torna)
 const tema = document.getElementById('temah')
 const audioAmb = document.getElementById('amb')
    switch (menu) {
@@ -520,6 +524,8 @@ const audioAmb = document.getElementById('amb')
     if (!suono){
           document.addEventListener('click', ()=>{
     audioMain.pause()
+  })
+  document.addEventListener('click', ()=>{
     audioTorna.pause()
   })
       audioTorna.volume = 0
@@ -529,6 +535,12 @@ const audioAmb = document.getElementById('amb')
           audioTorna.volume = 1
         }
     if (!crediti){
+      const cr = document.getElementById('cr')
+      cr.addEventListener('click', ()=>{
+      const tema = document.getElementById('temah')
+      tema.play()
+      tema.volume = 1
+     })
       audioMain.currentTime = 0
         audioMain.play()
       setTimeout(()=>{
@@ -557,6 +569,12 @@ const audioAmb = document.getElementById('amb')
           audioTorna.volume = 1
         }
     if (!opzioni){
+      const op = document.getElementById('op')
+     op.addEventListener('click', ()=>{
+      const tema = document.getElementById('temah')
+      tema.play()
+      tema.volume = 1
+     })
       audioMain.currentTime = 0
         audioMain.play()
       setTimeout(()=>{
@@ -579,6 +597,8 @@ const audioAmb = document.getElementById('amb')
   const me = document.getElementById('me')
           me.addEventListener('click', ()=>{
     audioTorna.pause()
+  })
+  me.addEventListener('click', ()=>{
     audioAmb.pause()
   })
         } else{
@@ -630,6 +650,9 @@ const audioAmb = document.getElementById('amb')
         } else if (!nuova){ 
         tema.volume = 0
         tema.pause()
+      audioAmb.play()
+      audioAmb.currentTime = 0
+      audioAmb.volume = 1
       setTimeout(()=>{
         newGame()
         cont = true
@@ -648,9 +671,6 @@ const audioAmb = document.getElementById('amb')
       cont2 = false
       crediti = false
       blocca = true
-      audioAmb.play()
-      audioAmb.currentTime = 0
-      audioAmb.volume = 1
       }, 5000)
     } else{
       nuova = false
