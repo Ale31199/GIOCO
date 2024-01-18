@@ -68,11 +68,11 @@
         </button>
         <button on:click="{gestisciMusica}" class="{musica ? "border-b-4 rounded-[50px] md:rounded-full":"border-b-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-green-950 to-transparent  border-green-700 hover:border-neutral-300">
           <img src="{music}" alt="layla" class="w-[60px] invert" />
-          <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px] monst">Music</p>
+          <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px] monst">Musica</p>
         </button>
         <button on:click="{()=>gestisciSuono()}" class="{suono ? "border-b-4 rounded-[50px] md:rounded-full":"border-b-4 rounded-2xl"} tran flex cursor-pointer justify-center items-center w-[80%] h-[120px] p-1 flex-col bg-gradient-to-t from-violet-950 to-transparent  border-violet-700 hover:border-neutral-300">
           <img src="{volumeh}" alt="layla" class="w-[60px] invert" />
-          <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px] monst">Sound Effects</p>
+          <p class="text-white text-[10px] sm:text-sm font-semibold relative top-[5px] monst">Effetti</p>
         </button>
         
         <button on:click="{()=>apriMenu('opzioni')}" class="text-white monst flex items-center cursor-pointer col-span-2 justify-center w-[80%] h-[50px] relative top-[50px] rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Torna al menu principale</button>
@@ -344,8 +344,12 @@ const confermareNuova=(opzione)=>{
         }
     tema.volume = 0
     audioTorna.play()
+    
+  
     if (conferma){
   setTimeout(()=>{
+    tema.volume = 0
+    tema.pause()
   conferma = false
   cont = true
   localStorage.setItem('cont', JSON.stringify(cont))
@@ -512,7 +516,7 @@ const continuaGame=()=>{
           tema.volume = 1
         }*/
 
-      
+       
  
   const apriMenu=(menu)=>{
 const audioMain = new Audio(main)
@@ -581,7 +585,9 @@ const audioAmb = document.getElementById('amb')
       setTimeout(()=>{
       opzioni = false
     }, 600)
-    }break;
+    }
+   
+    break;
     case 'menu':
     if (!suono){
   audioTorna.volume = 0
@@ -614,7 +620,7 @@ const audioAmb = document.getElementById('amb')
       tema.currentTime = 0
     }, 600)
       }
-      if (cont2){
+      if (!cont2){
         audioTorna.currentTime = 0
         audioTorna.volume = 1
           audioTorna.play()
@@ -637,6 +643,7 @@ const audioAmb = document.getElementById('amb')
         }
       audioMain.currentTime = 0
         audioMain.play()
+
         if (!cont){
         conferma = true
         } else if (!nuova){ 
@@ -679,18 +686,23 @@ const audioAmb = document.getElementById('amb')
         } else{
           audioMain.volume = 1
         }
+
       salvaNome()
+
       setTimeout(()=>{
       audioAmb.play()
       audioAmb.currentTime = 0
       audioAmb.volume = 1
       }, 1000)
-      tema.volume = 0
-      const tem = document.getElementById('temah')
-      document.addEventListener('click', ()=>{
-        tem.pause()
-      })
-      if (cont2){ 
+
+      const clickHandler = () => {
+    tema.pause();
+    tema.volume = 0;
+    document.removeEventListener('click', clickHandler);
+  };
+
+  document.addEventListener('click', clickHandler);
+      if (cont2){
         audioMain.currentTime = 0
         audioMain.play()
       setTimeout(()=>{
@@ -711,6 +723,8 @@ const audioAmb = document.getElementById('amb')
       blocca = true
       }, 5000)
     } else{
+        tema.play()
+        tema.volume = 1
       nuova = true
       blocca = true
       latrama2 = false
