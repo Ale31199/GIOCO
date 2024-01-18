@@ -159,16 +159,7 @@ import { writable } from 'svelte/store'
   let salvata = false
   let salvata2 = false
 
-  /*
-    onMount(async ()=>{
-      if (typeof localStorage !== 'undefined'){
-      const sNome = localStorage.getItem('nome') 
-    if (sNome){
-      nome = JSON.parse(sNome)
-    }
-  }})
-  */
-
+ 
 
   /*
   const caricaNome=()=>{
@@ -323,10 +314,11 @@ const newGame=()=>{
 
 const confermareNuova=(opzione)=>{
   const audioTorna= new Audio(torna)
-  const tema = document.getElementById('tema')
+  const tema = document.getElementById('temah')
   const audioAmb = document.getElementById('amb')
   switch(opzione){
   case 'si':
+    tema.volume = 0
     audioTorna.play()
     if (conferma){
   setTimeout(()=>{
@@ -343,6 +335,8 @@ const confermareNuova=(opzione)=>{
     }, 1000)
     setTimeout(()=>{
         caricamento = false
+        audioAmb.volume = 1
+        audioAmb.currentTime =  0
     }, 3000)
   }
   break;
