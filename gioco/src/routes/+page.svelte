@@ -79,11 +79,11 @@
       </div>
 
       <div class="{nuova ? "grid": "hidden"} {conferma ? "hidden": "grid"} sfoca w-[100%] h-[280px] {incognito ? "border-t-4 border-violet-900":"border-t-4 border-pink-900" && demone ? "border-t-4 border-red-900":"border-t-4 border-pink-900"} bg-gradient-to-t from-neutral-900 to-black bg-opacity-80 rounded-2xl  grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
-        <div class="{caricamento ? "hidden": "flex"} {caricamento2 ? "hidden": "flex"} {latrama ? "hidden": "flex"} justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
-          <p class=" sfoca2 monst text-white text-[10px] md:text-sm font-bold relative top-[-18px] text-justify flex justify-start ">Benvenuto su Undead Layla! Prima di cominciare, inserisci il tuo nome:</p>
+        <div class="{verifica ? "flex":"hidden"} {caricamento ? "hidden": "flex"} {caricamento2 ? "hidden": "flex"} {latrama ? "hidden": "flex"} justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
+          <p class=" sfoca2 monst text-white text-[10px] md:text-sm font-bold relative top-[-18px] text-justify flex justify-start ">Benvenuto su Undead Layla! Prima di cominciare, inserisci il tuo nome, dopodichè clicca su 'Fatto' per aggiornare il gioco. Potrai ritornare qui e iniziare la tua avventura!</p>
           <div class="flex justify-center items-center w-[100%] top-[35px] relative flex-col" >
-            <input on:input="{vediNome}" on:change="{Entra}" placeholder="Inserisci il tuo lurido nome qui..." bind:value="{nome}" class="rounded-xl outline-none w-[300px] p-3 mb-2" maxlength="30"/>
-            <button id='ins' on:click="{()=>salvaNome()}" class='text-white font-semibold rounded-xl p-2 bg-gradient-to-t from-green-950 to-green-600 border-2 border-green-600 hover:from-teal-950 hover:to-teal-600 hover:border-teal-600 w-[300px]'>Fatto</button>
+            <input on:change="{caricaNome}" on:keydown="{Entra}" placeholder="Inserisci il tuo nome qui..." bind:value="{nome}" class="rounded-xl outline-none w-[300px] p-3 mb-2" maxlength="30"/>
+            <button id='ins' on:click="{()=>{salvaNome(); aggiornaPagina();}}" class='text-white font-semibold rounded-xl p-2 bg-gradient-to-t from-green-950 to-green-600 border-2 border-green-600 hover:from-teal-950 hover:to-teal-600 hover:border-teal-600 w-[300px]'>Fatto</button>
           </div>
         </div>
 
@@ -92,10 +92,10 @@
         </div>
 
         
-        <p class="{caricamento ? "visible": "invisible"} sfoca monst text-white text-xs md:text-base font-bold justify-center items-center absolute top-[150px] sm:top-[100px] pulsa">Caricamento...</p>
+        <p class="{verifica ? "invisible": "visible"} {caricamento ? "visible": "invisible"}  sfoca monst text-white text-xs md:text-base font-bold justify-center items-center absolute top-[150px] sm:top-[100px] pulsa">Caricamento...</p>
 
         <div class="flex flex-row w-[100%] top-[-150px] justify-between relative">
-          <button id='me' on:click="{()=>apriMenu('menu')}" class="{caricamento ? "hidden": "flex"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[20%] h-[30px] relative rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Menu</button>
+          <button id='me' on:click="{()=>apriMenu('menu')}" class="{caricamento ? "hidden": "flex"}  sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[20%] h-[30px] relative rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">Menu</button>
           <button on:click="{()=>salvaGame()}" class="{salvata ? "flex": "hidden"} sfoca2 text-white monst flex items-center cursor-pointer justify-center w-[40%] h-[30px] relative  rounded-xl bg-gradient-to-t {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"}">{save}</button> 
         </div>
 
@@ -122,7 +122,7 @@
 
    <div class="flex flex-col w-[100%] relative top-[-430px] items-center justify-center">
     <button on:click="{()=>gioca('risp')}" disabled={blocca} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2  bg-gradient-to-b {incognito ? "from-neutral-950  to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} text-white font-semibold">{risp}</button>
-    <button on:click="{()=>gioca('risp1')}" disabled={blocca || blocca2} class="{blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} {blocca2 ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px]  monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} text-white font-semibold">{risp1}</button>
+    <button on:click="{()=>gioca('risp1')}" disabled={blocca || blocca2} class=" {blocca ? "hidden cursor-default": "opacity-100 cursor-pointer"} {blocca2 ? "hidden cursor-default": "opacity-100 cursor-pointer"} text-[11px] sm:text-sm  sfoca w-[95%] h-[50px]  monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito ? "from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900" && demone ? "from-red-950 to-red-900 border-2 border-red-900 hover:from-orange-950 hover:to-orange-900 hover:border-orange-900":"from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900"} text-white font-semibold">{risp1}</button>
   </div>
 
   </div>
@@ -154,31 +154,20 @@ import { writable } from 'svelte/store'
 
   let mainSfondi = sfondo;
   let nome = ''
+  $: nomereattivo = ''
   let latrama = false
   let latrama2  = false
   let salvata = false
   let salvata2 = false
 
  
-
-  /*
-  const caricaNome=()=>{
-    if (typeof window !== 'undefined'){
-      const unNome = localStorage.getItem('nome')
-      if (unNome){
-        nome= JSON.parse(unNome)
-      }
-      nome = unNome
-    }
+  const caricaNome=(event)=>{
+    nome = event.target.value
   }
 
-  caricaNome()
-  */
-
- const vediNome=()=>{
-  const ilmionome = localStorage.getItem('nome')
-  nome = ilmionome
- }
+  const aggiornaPagina=()=>{
+    location.reload()
+  }
 
   const salvaNome=()=>{
     if (typeof window !== 'undefined'){
@@ -203,10 +192,13 @@ import { writable } from 'svelte/store'
       salvata = true
       salvata2 = true
       localStorage.setItem('nome', nome)
-      nome = ''
+      nomereattivo = nome
+      nome = nomereattivo
       console.log(nome)
+   
   setTimeout(()=>{
     blocca = false
+  vediNome()
   }, 700)
   }
 }
@@ -216,15 +208,29 @@ import { writable } from 'svelte/store'
       salvaNome()
     }
   }
+  
+  const vediNome =()=>{
+    if (typeof window !== 'undefined'){
+  let ilmionome = localStorage.getItem('nome')
+  if (ilmionome){
+    nome = ilmionome
+    nomereattivo = nome
+  }}}
+  
+    vediNome()
 
-  let name = nome
- 
+    onMount(()=>{
+    $: vediNome()
+  })
+
+  let introNome = `Benvenuto ${nomereattivo}! Sei pronto ad aiutarmi nella mia avventura? Mi raccomando rispondi di sì!`
+
   const storia = {
-	intro:{text: `Benvenuto ${name}! Sei pronto ad aiutarmi nella mia avventura? Mi raccomando rispondi di sì!`,
+	intro:{text: introNome,
   ris:['Certo, ti aiuterò!', 'Scusa, non credo di essere ancora pronto'],
   nextLev: ['start', 'end']},
 
-  start:{ text:`Ahh ti ringrazio ${name}! oh aspetta ti mando i dati con tutte le informazioni riguardante cio che sta accadendo.... *invio dati*`,
+  start:{ text:`Ahh ti ringrazio ${nome}! oh aspetta ti mando i dati con tutte le informazioni riguardante cio che sta accadendo.... *invio dati*`,
           ris:['Andiamo!', ''],
           nextLev: ['inizio']},
 
@@ -243,7 +249,7 @@ import { writable } from 'svelte/store'
 };
 
 
-  console.log(name)
+  console.log(nomereattivo)
   console.log(storia.intro.text)
 
 
@@ -349,8 +355,7 @@ const confermareNuova=(opzione)=>{
         }
     tema.volume = 0
     audioTorna.play()
-    
-  
+   
     if (conferma){
   setTimeout(()=>{
     tema.volume = 0
@@ -365,11 +370,13 @@ const confermareNuova=(opzione)=>{
         cont2 = false
       opzioni = false
       crediti = false
+      console.log('1')
     }, 1000)
     setTimeout(()=>{
         caricamento = false
         audioAmb.volume = 1
         audioAmb.currentTime =  0
+        console.log('2')
     }, 3000)
   }
   break;
@@ -398,17 +405,6 @@ const confermareNuova=(opzione)=>{
   }
 }
 
-/*
-const confermare=()=>{
-  if (!cont && !nuova){
-    conferma = true
-  }else{
-    conferma = false
-  }
-}
-confermare()
-*/
-  
 
   onMount(()=>{
   if (typeof window !== 'undefined'){
@@ -505,24 +501,8 @@ const continuaGame=()=>{
   let caricamento = false
   let cont2 = false
   let caricamento2 = false
+  let verifica = true
 
-
-  /* if (!suono){
-  const co = document.getElementById('co')
-  const tema = document.getElementById('temah')
-          co.addEventListener('click', ()=>{
-            tema.pause()
-            tema.volume=0
-    audioMain.pause()
-  audioMain.volume = 0
-  })
-        } else{
-          audioMain.volume = 1
-          tema.volume = 1
-        }*/
-
-       
- 
   const apriMenu=(menu)=>{
 const audioMain = new Audio(main)
 const audioTorna = new Audio(torna)
@@ -649,6 +629,12 @@ const audioAmb = document.getElementById('amb')
       audioMain.currentTime = 0
         audioMain.play()
 
+        const nomeh = localStorage.getItem('nome')
+        if (nomeh){
+          nome = nomeh
+        }
+
+
         if (!cont){
         conferma = true
         } else if (!nuova){ 
@@ -664,6 +650,7 @@ const audioAmb = document.getElementById('amb')
         blocca = true
         nuova = true
         caricamento = true
+        verifica = false
         cont2 = false
       opzioni = false
       crediti = false
@@ -676,6 +663,14 @@ const audioAmb = document.getElementById('amb')
       crediti = false
       blocca = true
       }, 5000)
+      if (nome !== ''){
+      setTimeout(()=>{
+        verifica = true
+        blocca = false
+        latrama = true
+        salvata = true
+    }, 5200)
+      }
     } else{
       nuova = false
       blocca = true
@@ -818,18 +813,7 @@ const audioAmb = document.getElementById('amb')
     localStorage.setItem('incognito', JSON.stringify(incognito));
   };
 
-  /*
-    const audioScelta = document.getElementById('scelta');
-  const audioMain = document.getElementById('main');
-  const audioOver = document.getElementById('gameover');
-  const audioSaving = document.getElementById('saving');
-  const audioTorna = document.getElementById('torna');
-  audioMain.volume = 0;
-audioOver.volume = 0;
-audioSaving.volume = 0;
-audioTorna.volume = 0;
-*/
-
+ 
 
  let musica = true
  let suono = true
@@ -957,7 +941,7 @@ frasiRandom()
 
 
  .sfo{
-  animation: 20s infinite alternate-reverse sfon;
+  animation: 15s infinite alternate-reverse sfon;
  }
  @keyframes sfon {
   0%{scale: 100%;}
