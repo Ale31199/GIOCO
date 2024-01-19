@@ -22,7 +22,7 @@
     <audio src={starta} id='starta' />
 
     <div class="justify-center w-[100%] sfoca2 relative top-[-250px] md:scale-125 {start ? "flex":"hidden"}">
-    <button id='ini' on:click={()=>inizia()} class=" text-white font-thin  bg-gradient-to-t flex from-violet-900 border-b-2 border-violet-600 rounded-xl p-2 pr-8 pl-8 text-xl pulsa2">Clicca / tocca per iniziare</button>
+    <button id='ini' on:click={()=>inizia()} class=" text-white font-thin  bg-gradient-to-t flex from-violet-900 to-neutral-950 border-b-2 border-violet-600 rounded-xl p-2 pr-8 pl-8 text-xl pulsa2">Clicca per iniziare</button>
     </div>
 
     <div class="justify-items-center w-[100%] relative top-[-450px] grid" >
@@ -81,7 +81,7 @@
       <div class="{nuova ? "grid": "hidden"} {conferma ? "hidden": "grid"} sfoca w-[100%] h-[280px] {incognito ? "border-t-4 border-violet-900":"border-t-4 border-pink-900" && demone ? "border-t-4 border-red-900":"border-t-4 border-pink-900"} bg-gradient-to-t from-neutral-900 to-black bg-opacity-80 rounded-2xl  grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center">
         <div class="{verifica ? "flex":"hidden"} {caricamento ? "hidden": "flex"} {caricamento2 ? "hidden": "flex"} {latrama ? "hidden": "flex"} justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
           <p class=" sfoca2 monst text-white text-[10px] md:text-sm font-bold relative top-[-18px] text-justify flex justify-start ">Benvenuto su Undead Layla! Prima di cominciare, inserisci il tuo nome, dopodichè clicca su 'Fatto' per aggiornare il gioco. Potrai ritornare qui e iniziare la tua avventura!</p>
-          <div class="flex justify-center items-center w-[100%] top-[35px] relative flex-col" >
+          <div class="flex justify-center items-center w-[100%] top-[15px] relative flex-col" >
             <input on:change="{caricaNome}" on:keydown="{Entra}" placeholder="Inserisci il tuo nome qui..." bind:value="{nome}" class="rounded-xl outline-none w-[300px] p-3 mb-2" maxlength="30"/>
             <button id='ins' on:click="{()=>{salvaNome(); aggiornaPagina();}}" class='text-white font-semibold rounded-xl p-2 bg-gradient-to-t from-green-950 to-green-600 border-2 border-green-600 hover:from-teal-950 hover:to-teal-600 hover:border-teal-600 w-[300px]'>Fatto</button>
           </div>
@@ -355,6 +355,14 @@ const confermareNuova=(opzione)=>{
         }
     tema.volume = 0
     audioTorna.play()
+
+    const nomeh = localStorage.getItem('nome')
+        if (nomeh){
+          nome = nomeh
+        }
+
+        nome = ''
+        localStorage.setItem('nome', nome)
    
     if (conferma){
   setTimeout(()=>{
@@ -367,6 +375,7 @@ const confermareNuova=(opzione)=>{
         blocca = true
         nuova  = true
         caricamento = true
+        verifica = false
         cont2 = false
       opzioni = false
       crediti = false
@@ -374,6 +383,7 @@ const confermareNuova=(opzione)=>{
     }, 1000)
     setTimeout(()=>{
         caricamento = false
+        verifica= true
         audioAmb.volume = 1
         audioAmb.currentTime =  0
         console.log('2')
@@ -634,7 +644,6 @@ const audioAmb = document.getElementById('amb')
           nome = nomeh
         }
 
-
         if (!cont){
         conferma = true
         } else if (!nuova){ 
@@ -658,6 +667,7 @@ const audioAmb = document.getElementById('amb')
       setTimeout(()=>{
         nuova = true
         caricamento = false
+        verifica = true
       opzioni = false
       cont2 = false
       crediti = false
