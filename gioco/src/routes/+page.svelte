@@ -82,7 +82,7 @@
         <div class="{verifica ? "flex":"hidden"} {caricamento ? "hidden": "flex"} {caricamento2 ? "hidden": "flex"} {latrama ? "hidden": "flex"} justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col">
           <p class=" sfoca2 monst text-white text-[10px] md:text-sm font-bold relative top-[-18px] text-justify flex justify-start ">Benvenuto su Undead Layla! Prima di cominciare, inserisci il tuo nome, dopodichè clicca su 'Fatto' per aggiornare il gioco. Potrai ritornare qui e iniziare la tua avventura!</p>
           <div class="flex justify-center items-center w-[100%] top-[15px] relative flex-col" >
-            <input on:change="{caricaNome}" on:keydown="{Entra}" placeholder="Inserisci il tuo nome qui..." bind:value="{nome}" class="rounded-xl outline-none w-[300px] p-3 mb-2" maxlength="30"/>
+            <input on:change="{caricaNome}" placeholder="Inserisci il tuo nome qui..." bind:value="{nome}" class="rounded-xl outline-none w-[300px] p-3 mb-2" maxlength="30"/>
             <button id='ins' on:click="{()=>{salvaNome(); aggiornaPagina();}}" class='text-white font-semibold rounded-xl p-2 bg-gradient-to-t from-green-950 to-green-600 border-2 border-green-600 hover:from-teal-950 hover:to-teal-600 hover:border-teal-600 w-[300px]'>Fatto</button>
           </div>
         </div>
@@ -203,12 +203,6 @@ import { writable } from 'svelte/store'
   }
 }
 
-  const Entra=(event)=>{
-    if (event.key === 'Enter'){
-      salvaNome()
-    }
-  }
-  
   const vediNome =()=>{
     if (typeof window !== 'undefined'){
   let ilmionome = localStorage.getItem('nome')
