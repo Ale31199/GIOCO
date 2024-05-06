@@ -1,0 +1,143 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "imports": [
+      "_internal.js"
+    ],
+    "isEntry": true,
+    "src": ".svelte-kit/generated/server/internal.js"
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_ssr.js": {
+    "file": "chunks/ssr.js"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "imports": [
+      "_internal.js",
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js"
+  },
+  "src/routes/+layout.svelte": {
+    "css": [
+      "_app/immutable/assets/_layout.N3Ea7l2N.css"
+    ],
+    "file": "entries/pages/_layout.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+layout.svelte"
+  },
+  "src/routes/+page.svelte": {
+    "assets": [
+      "_app/immutable/assets/layla.4QN3AMxE.png",
+      "_app/immutable/assets/musicc.48vT7KBD.png",
+      "_app/immutable/assets/volume.wJOwFlVK.png",
+      "_app/immutable/assets/incognito.2_UKIO0P.png",
+      "_app/immutable/assets/halloween.YaQNY-l0.png",
+      "_app/immutable/assets/gameover.-IHOc5jP.wav",
+      "_app/immutable/assets/mainmenu.QxhX6alv.wav",
+      "_app/immutable/assets/saving.hpPlNqxS.wav",
+      "_app/immutable/assets/scelta.9rpxwAp7.wav",
+      "_app/immutable/assets/tornaback.bVplCMFP.wav",
+      "_app/immutable/assets/theme.NdZXSwvg.mp3",
+      "_app/immutable/assets/ambient.tt1OhHo1.mp3",
+      "_app/immutable/assets/start.qpBwITo5.wav",
+      "_app/immutable/assets/OIG.sxQiJVCv.jpg",
+      "_app/immutable/assets/OIGnotte.L7R73mCb.jpg"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.2aGqEDXk.css"
+    ],
+    "file": "entries/pages/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+page.svelte"
+  },
+  "src/routes/effetti/ambient.mp3": {
+    "file": "_app/immutable/assets/ambient.tt1OhHo1.mp3",
+    "src": "src/routes/effetti/ambient.mp3"
+  },
+  "src/routes/effetti/gameover.wav": {
+    "file": "_app/immutable/assets/gameover.-IHOc5jP.wav",
+    "src": "src/routes/effetti/gameover.wav"
+  },
+  "src/routes/effetti/mainmenu.wav": {
+    "file": "_app/immutable/assets/mainmenu.QxhX6alv.wav",
+    "src": "src/routes/effetti/mainmenu.wav"
+  },
+  "src/routes/effetti/saving.wav": {
+    "file": "_app/immutable/assets/saving.hpPlNqxS.wav",
+    "src": "src/routes/effetti/saving.wav"
+  },
+  "src/routes/effetti/scelta.wav": {
+    "file": "_app/immutable/assets/scelta.9rpxwAp7.wav",
+    "src": "src/routes/effetti/scelta.wav"
+  },
+  "src/routes/effetti/start.wav": {
+    "file": "_app/immutable/assets/start.qpBwITo5.wav",
+    "src": "src/routes/effetti/start.wav"
+  },
+  "src/routes/effetti/theme.mp3": {
+    "file": "_app/immutable/assets/theme.NdZXSwvg.mp3",
+    "src": "src/routes/effetti/theme.mp3"
+  },
+  "src/routes/effetti/tornaback.wav": {
+    "file": "_app/immutable/assets/tornaback.bVplCMFP.wav",
+    "src": "src/routes/effetti/tornaback.wav"
+  },
+  "src/routes/imma/OIG.jpg": {
+    "file": "_app/immutable/assets/OIG.sxQiJVCv.jpg",
+    "src": "src/routes/imma/OIG.jpg"
+  },
+  "src/routes/imma/OIGmattina.jpg": {
+    "file": "_app/immutable/assets/OIGmattina.QJy1pWCW.jpg",
+    "src": "src/routes/imma/OIGmattina.jpg"
+  },
+  "src/routes/imma/OIGnotte.jpg": {
+    "file": "_app/immutable/assets/OIGnotte.L7R73mCb.jpg",
+    "src": "src/routes/imma/OIGnotte.jpg"
+  },
+  "src/routes/imma/halloween.png": {
+    "file": "_app/immutable/assets/halloween.YaQNY-l0.png",
+    "src": "src/routes/imma/halloween.png"
+  },
+  "src/routes/imma/incognito.png": {
+    "file": "_app/immutable/assets/incognito.2_UKIO0P.png",
+    "src": "src/routes/imma/incognito.png"
+  },
+  "src/routes/imma/layla.png": {
+    "file": "_app/immutable/assets/layla.4QN3AMxE.png",
+    "src": "src/routes/imma/layla.png"
+  },
+  "src/routes/imma/musicc.png": {
+    "file": "_app/immutable/assets/musicc.48vT7KBD.png",
+    "src": "src/routes/imma/musicc.png"
+  },
+  "src/routes/imma/mute.png": {
+    "file": "_app/immutable/assets/mute.JTiHYcND.png",
+    "src": "src/routes/imma/mute.png"
+  },
+  "src/routes/imma/volume.png": {
+    "file": "_app/immutable/assets/volume.wJOwFlVK.png",
+    "src": "src/routes/imma/volume.png"
+  }
+}
