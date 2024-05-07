@@ -1,4 +1,5 @@
 <script>
+	import storia from './storia.json';
 	import layla from './imma/layla.png';
 	import music from './imma/musicc.png';
 	import vol from './imma/volume.png';
@@ -31,10 +32,6 @@
 		nome = event.target.value;
 	};
 
-	const aggiornaPagina = () => {
-		location.reload();
-	};
-
 	const salvaNome = () => {
 		if (typeof window !== 'undefined') {
 			const ins = document.getElementById('ins');
@@ -64,29 +61,12 @@
 
 			setTimeout(() => {
 				blocca = false;
-				vediNome();
 			}, 700);
 		}
 	};
 
-	const vediNome = () => {
-		if (typeof window !== 'undefined') {
-			let ilmionome = localStorage.getItem('nome');
-			if (ilmionome) {
-				nome = ilmionome;
-				nomereattivo = nome;
-			}
-		}
-	};
-
-	vediNome();
-
-	onMount(() => {
-		$: vediNome();
-	});
-
-	let introNome = `Welcome ${nomereattivo}! Are you ready to help me with my adventure?!`;
-
+	let introNome = `Welcome to Undead Layla ${nomereattivo}! In this game you'll have to help Layla to unveil misteryous secrets and enigmas to know what's behind Layla's amnesy. `;
+	/*
 	const storia = {
 		intro: {
 			text: introNome,
@@ -114,6 +94,7 @@
 			nextLev: ['inizio'],
 		},
 	};
+  */
 
 	console.log(nomereattivo);
 	console.log(storia.intro.text);
@@ -124,6 +105,7 @@
 	let nextLevel = 'intro';
 	let blocca = true;
 	let blocca2 = false;
+	let playing = false;
 
 	const newGame = () => {
 		nextLevel = 'intro';
@@ -438,6 +420,7 @@
 
 				break;
 			case 'menu':
+				playing = false;
 				if (!suono) {
 					audioTorna.volume = 0;
 					audioAmb.volume = 0;
@@ -483,6 +466,7 @@
 				}
 				break;
 			case 'nuova':
+				playing = true;
 				if (!suono) {
 					document.addEventListener('click', () => {
 						audioMain.pause();
@@ -543,6 +527,7 @@
 				}
 				break;
 			case 'cont':
+				playing = true;
 				if (!suono) {
 					document.addEventListener('click', () => {
 						audioMain.pause();
@@ -824,12 +809,13 @@ frasiRandom()
 				src="{mainSfondi}"
 				class="object-cover w-full h-full sfo rounded-2xl opacity-55 {incognito ? 'saturate-0' : ''} absolute"
 			/>
+
 			<img
 				src="{layla}"
 				alt="layla"
 				class=" sfoca2 absolute tran {start
 					? 'w-[450px] md:w-[550px] lg:w-[600px] 2xl:w-[650px]'
-					: 'w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px]'}"
+					: 'w-[200px] md:w-[400px] lg:w-[400px] 2xl:w-[450px]'} {playing ? 'hidden ease-out duration-1000' : 'flex'}"
 			/>
 		</div>
 
@@ -1057,11 +1043,13 @@ frasiRandom()
 				</div>
 
 				<div
-					class="{nuova ? 'grid' : 'hidden'} {conferma ? 'hidden' : 'grid'} sfoca w-[100%] h-[280px] {incognito
+					class="{nuova ? 'grid' : 'hidden'} {conferma
+						? 'hidden'
+						: 'grid'} sfoca w-[100%] h-[400px] md:h-[520px] {incognito
 						? 'border-t-4 border-violet-900'
 						: 'border-t-4 border-pink-900' && demone
 							? 'border-t-4 border-red-900'
-							: 'border-t-4 border-pink-900'} bg-gradient-to-t from-neutral-900 to-black bg-opacity-80 rounded-2xl grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center"
+							: 'border-t-4 border-pink-900'} bg-gradient-to-t from-neutral-900 to-black bg-opacity-80 relative -top-[40px] md:-top-[110px] rounded-2xl grid-cols-1 grid-rows-2 gap-8 p-3 justify-center justify-items-center"
 				>
 					<div
 						class="{verifica ? 'flex' : 'hidden'} {caricamento ? 'hidden' : 'flex'} {caricamento2
@@ -1077,21 +1065,13 @@ frasiRandom()
 							will reload automatically and you'll be able to start the game.
 						</p>
 						<div class="flex justify-center items-center w-[100%] top-[15px] relative flex-col">
-							<input
-								on:change="{caricaNome}"
-								placeholder="Inserisci il tuo nome qui..."
-								bind:value="{nome}"
-								class="rounded-xl outline-none w-[300px] p-3 mb-2"
-								maxlength="30"
-							/>
 							<button
 								id="ins"
 								on:click="{() => {
 									salvaNome();
-									aggiornaPagina();
 								}}"
 								class="text-white font-semibold rounded-xl p-2 bg-gradient-to-t from-green-950 to-green-600 border-2 border-green-600 hover:from-teal-950 hover:to-teal-600 hover:border-teal-600 w-[300px]"
-								>Done</button
+								>Start</button
 							>
 						</div>
 					</div>
@@ -1116,7 +1096,7 @@ frasiRandom()
 						Loading...
 					</p>
 
-					<div class="flex flex-row w-[100%] top-[-150px] justify-between relative">
+					<div class="flex flex-row w-[100%] h-fit top-[-205px] md:top-[-265px] justify-between relative">
 						<button
 							id="me"
 							on:click="{() => apriMenu('menu')}"

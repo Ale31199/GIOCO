@@ -1,0 +1,27 @@
+{
+	"intro": {
+		"text": "introNome",
+		"ris": ["Of course, I will!", "Sorry, I dont think I am ready yet"],
+		"nextLev": ["start", "end"]
+	},
+	"start": {
+		"text": "Ahh thanks nome! oh wait, I'm sending you all the info about what's going on..... *sending data*",
+		"ris": ["Lets go!", ""],
+		"nextLev": ["inizio"]
+	},
+	"end": {
+		"text": "Are you sure? I really need your help... my communicator was able to reach only your signal after hours and hours of attempts... Dont you want to give me a hand?",
+		"ris": ["Eh ok :)", "Fine, just tell me what you need"],
+		"nextLev": ["bho", "bho"]
+	},
+	"inizio": {
+		"text": "Chapter One: The Glitch City...",
+		"ris": ["Begin", ""],
+		"nextLev": ["si", "si"]
+	},
+	"bho": {
+		"text": "Thanks! Let me just send you the breafing with all the info about what is going on..... *sending data*",
+		"ris": ["Perfect", ""],
+		"nextLev": ["inizio"]
+	}
+}
