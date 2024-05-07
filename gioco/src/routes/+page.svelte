@@ -1061,15 +1061,14 @@ frasiRandom()
 						<p
 							class=" sfoca2 monst text-white text-[10px] md:text-[14px] font-bold relative top-[25px] text-justify flex justify-start"
 						>
-							In a dystopian future, the young and brilliant hacker Layla discovers a disturbing anomaly in the very
-							fabric of reality: an entire city has vanished, erased from every archive and collective memory.
-							Determined to uncover the mystery of this "Glitch City," Layla turns to a player, an expert in virtual
-							adventures, to help her in her investigations. Guided by Layla's voice, the player embarks on a journey
-							through a world of virtual reality, encrypted secrets, and political entanglements, solving puzzles and
-							facing dangers to uncover the hidden truth behind the disappearance of Glitch City and its connection to a
-							dark conspiracy threatening the balance of the world itself. Amid unlikely alliances, betrayals, and
-							surprising revelations, Layla and the player must collaborate to unveil the mysteries hidden at the heart
-							of virtual reality and protect the future of humanity.
+							In a dystopian future, Layla, a determined young woman, arrives in the city of Glitch City in search of
+							the truth about her father's mysterious death. This metropolis, shrouded in secrecy and corporate
+							intrigue, hides dark secrets and mysteries that Layla is determined to uncover. Layla's father was a
+							renowned scientist who was on the brink of making a revolutionary discovery before his sudden demise.
+							Determined to follow in his footsteps and uncover the truth behind his disappearance, Layla plunges into a
+							dangerous labyrinth of conspiracies and clues, encountering unexpected allies along the way. With your
+							guidance, Layla will navigate the dangers of Glitch City and confront the forces seeking to control its
+							destiny.
 						</p>
 						<div class="flex justify-center items-center w-[100%] top-[65px] relative flex-col">
 							<button
