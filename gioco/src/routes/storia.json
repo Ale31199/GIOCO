@@ -148,51 +148,151 @@
 	"level6B3": {
 		"text": "Facing her adversaries head-on, Layla confronts them about their involvement in her father's death. Despite their attempts to intimidate her, Layla stands her ground, refusing to back down in the face of danger. With determination and courage, Layla exposes the truth about her father's death and the dark secrets hidden within Glitch City, bringing those responsible to justice.",
 		"ris": ["Continue", ""],
-		"nextLev": ["end"]
+		"nextLev": ["level7B4"]
 	},
 	"level6B4": {
 		"text": "Retreating and regrouping, Layla seeks allies and resources to take on the powerful forces working against her. With each ally she gains and every resource she acquires, Layla gets closer to unraveling the conspiracy that led to her father's demise. Armed with newfound allies and determination, Layla prepares to confront those responsible and uncover the truth about her father's death.",
 		"ris": ["Continue", ""],
-		"nextLev": ["end"]
+		"nextLev": ["level7B5"]
 	},
 	"level7A1": {
 		"text": "With the assistance of the security personnel, Layla delves deeper into the secrets of the Glitch Palace and uncovers shocking revelations about her father's research. Together, they uncover a conspiracy that stretches far beyond Glitch City, implicating powerful individuals with a vested interest in controlling the city's destiny. With the truth exposed, Layla prepares to confront those responsible and bring them to justice.",
 		"ris": ["Continue", ""],
-		"nextLev": ["end"]
+		"nextLev": ["level8A1"]
 	},
 	"level7A2": {
 		"text": "Having escaped the Glitch Palace, Layla disappears into the shadows of Glitch City, determined to uncover the truth about her father's death. With the information she obtained, Layla begins to unravel a conspiracy that stretches far beyond Glitch City, implicating powerful individuals with a vested interest in controlling the city's destiny. With newfound allies and determination, Layla prepares to confront those responsible and bring them to justice.",
 		"ris": ["Continue", ""],
-		"nextLev": ["end"]
+		"nextLev": ["level8A2"]
 	},
 	"level7A3": {
 		"text": "Despite facing overwhelming odds, Layla manages to escape from the Glitch Palace and continues her investigation into her father's death. With each piece of the puzzle she uncovers, Layla gets closer to unraveling the conspiracy that led to her father's demise. Armed with determination and courage, Layla prepares to confront those responsible and uncover the truth about her father's death.",
 		"ris": ["Continue", ""],
-		"nextLev": ["end"]
+		"nextLev": ["level8A3"]
 	},
 	"level7A4": {
-		"text": "Having escaped the dangers of the Glitch Palace, Layla disappears into the shadows of Glitch City, determined to uncover the truth about her father's death. With each passing day, Layla gets closer to unraveling the conspiracy that led to her father's demise. Armed with determination and courage, Layla prepares to confront those responsible and bring them to justice.",
+		"text": "Having escaped from the Glitch Palace, Layla disappears into the shadows of Glitch City, determined to uncover the truth about her father's death. With the information she obtained, Layla begins to unravel a conspiracy that stretches far beyond Glitch City, implicating powerful individuals with a vested interest in controlling the city's destiny. With newfound allies and determination, Layla prepares to confront those responsible and bring them to justice.",
 		"ris": ["Continue", ""],
-		"nextLev": ["end"]
+		"nextLev": ["level8A4"]
 	},
 	"level7B1": {
-		"text": "Continuing her investigation, Layla risks everything to uncover the truth about her father's death and the dark secrets of Glitch City. With each step she takes, Layla gets closer to unraveling the conspiracy that led to her father's demise. Despite the dangers she faces, Layla remains determined to confront those responsible and bring them to justice.",
-		"ris": ["Continue", ""],
-		"nextLev": ["end"]
+		"text": "Continuing her investigation, Layla risks everything to uncover the truth about her father's death and the secrets of Glitch City. With each revelation, Layla gets closer to unraveling the conspiracy that led to her father's demise. However, her pursuit of justice attracts the attention of powerful individuals who will stop at nothing to silence her. What does Layla do?",
+		"ris": [
+			"Continue her investigation, determined to bring those responsible to justice no matter the risks.",
+			"Go into hiding and seek allies to help her take on the powerful forces working against her."
+		],
+		"nextLev": ["level8B1", "level8B2"]
 	},
 	"level7B2": {
-		"text": "Going into hiding, Layla seeks refuge from the powerful forces working against her, biding her time until she's ready to strike back. Despite the risks, Layla continues her investigation into her father's death, determined to uncover the truth no matter the obstacles in her path. With each passing day, Layla gets closer to unraveling the conspiracy that led to her father's demise.",
+		"text": "Choosing to go into hiding, Layla seeks refuge in the shadows of Glitch City, wary of the dangers lurking around every corner. Despite the risks, Layla continues her investigation into her father's death, determined to uncover the truth no matter the obstacles in her path. With each passing day, Layla gets closer to unraveling the conspiracy that led to her father's demise.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level8B3"]
+	},
+	"level7B3": {
+		"text": "Facing her adversaries head-on, Layla confronts them about their involvement in her father's death. Despite their attempts to intimidate her, Layla stands her ground, refusing to back down in the face of danger. With determination and courage, Layla exposes the truth about her father's death and the dark secrets hidden within Glitch City, bringing those responsible to justice.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level8B4"]
+	},
+	"level7B4": {
+		"text": "Retreating and regrouping, Layla seeks allies and resources to take on the powerful forces working against her. With each ally she gains and every resource she acquires, Layla gets closer to unraveling the conspiracy that led to her father's demise. Armed with newfound allies and determination, Layla prepares to confront those responsible and uncover the truth about her father's death.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level8B5"]
+	},
+	"level8A1": {
+		"text": "With the truth exposed, Layla prepares to confront those responsible for her father's death and the secrets of Glitch City. Armed with determination and courage, Layla faces off against powerful adversaries who will stop at nothing to protect their interests. In a final showdown, Layla emerges victorious, bringing justice to her father and peace to Glitch City.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level9A1"]
+	},
+	"level8A2": {
+		"text": "With newfound allies and determination, Layla prepares to confront those responsible for her father's death and the secrets of Glitch City. Armed with courage and resilience, Layla faces off against powerful adversaries who will stop at nothing to protect their interests. In a final showdown, Layla emerges victorious, bringing justice to her father and peace to Glitch City.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level9A2"]
+	},
+	"level8A3": {
+		"text": "Armed with determination and courage, Layla prepares to confront those responsible for her father's death and the secrets of Glitch City. Despite facing overwhelming odds, Layla refuses to back down, determined to bring justice to her father and peace to Glitch City. In a final showdown, Layla emerges victorious, exposing the truth and bringing those responsible to justice.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level9A3"]
+	},
+	"level8A4": {
+		"text": "With newfound allies and determination, Layla prepares to confront those responsible for her father's death and the secrets of Glitch City. Armed with courage and resilience, Layla faces off against powerful adversaries who will stop at nothing to protect their interests. In a final showdown, Layla emerges victorious, bringing justice to her father and peace to Glitch City.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level9A4"]
+	},
+	"level8B1": {
+		"text": "Continuing her investigation, Layla risks everything to uncover the truth about her father's death and the secrets of Glitch City. With each revelation, Layla gets closer to unraveling the conspiracy that led to her father's demise. However, her pursuit of justice attracts the attention of powerful individuals who will stop at nothing to silence her. What does Layla do?",
+		"ris": [
+			"Continue her investigation, determined to bring those responsible to justice no matter the risks.",
+			"Go into hiding and seek allies to help her take on the powerful forces working against her."
+		],
+		"nextLev": ["level9B1", "level9B2"]
+	},
+	"level8B2": {
+		"text": "Choosing to go into hiding, Layla seeks refuge in the shadows of Glitch City, wary of the dangers lurking around every corner. Despite the risks, Layla continues her investigation into her father's death, determined to uncover the truth no matter the obstacles in her path. With each passing day, Layla gets closer to unraveling the conspiracy that led to her father's demise.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level9B3"]
+	},
+	"level8B3": {
+		"text": "Facing her adversaries head-on, Layla confronts them about their involvement in her father's death. Despite their attempts to intimidate her, Layla stands her ground, refusing to back down in the face of danger. With determination and courage, Layla exposes the truth about her father's death and the dark secrets hidden within Glitch City, bringing those responsible to justice.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level9B4"]
+	},
+	"level8B4": {
+		"text": "Retreating and regrouping, Layla seeks allies and resources to take on the powerful forces working against her. With each ally she gains and every resource she acquires, Layla gets closer to unraveling the conspiracy that led to her father's demise. Armed with newfound allies and determination, Layla prepares to confront those responsible and uncover the truth about her father's death.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level9B5"]
+	},
+	"level9A1": {
+		"text": "With justice served and the truth revealed, Layla emerges as a hero of Glitch City, hailed for her courage and determination. As the city celebrates its newfound freedom, Layla reflects on her journey and the sacrifices made along the way. With her father's legacy honored and the secrets of Glitch City laid bare, Layla looks to the future with hope and optimism.",
 		"ris": ["Continue", ""],
 		"nextLev": ["end"]
 	},
-	"level7B3": {
-		"text": "Retreating from her adversaries, Layla prepares to confront them on her own terms, seeking allies and resources to help her in her quest for justice. With each ally she gains and every resource she acquires, Layla gets closer to unraveling the conspiracy that led to her father's demise. Armed with determination and courage, Layla prepares to confront those responsible and bring them to justice.",
+	"level9A2": {
+		"text": "With justice served and the truth revealed, Layla emerges as a hero of Glitch City, hailed for her courage and determination. As the city celebrates its newfound freedom, Layla reflects on her journey and the sacrifices made along the way. With her father's legacy honored and the secrets of Glitch City laid bare, Layla looks to the future with hope and optimism.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level9A3": {
+		"text": "With justice served and the truth revealed, Layla emerges as a hero of Glitch City, hailed for her courage and determination. As the city celebrates its newfound freedom, Layla reflects on her journey and the sacrifices made along the way. With her father's legacy honored and the secrets of Glitch City laid bare, Layla looks to the future with hope and optimism.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level9A4": {
+		"text": "With justice served and the truth revealed, Layla emerges as a hero of Glitch City, hailed for her courage and determination. As the city celebrates its newfound freedom, Layla reflects on her journey and the sacrifices made along the way. With her father's legacy honored and the secrets of Glitch City laid bare, Layla looks to the future with hope and optimism.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level8B5": {
+		"text": "With justice served and the truth revealed, Layla emerges as a hero of Glitch City, hailed for her courage and determination. As the city celebrates its newfound freedom, Layla reflects on her journey and the sacrifices made along the way. With her father's legacy honored and the secrets of Glitch City laid bare, Layla looks to the future with hope and optimism.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level9B1": {
+		"text": "With justice served and the truth revealed, Layla emerges as a hero of Glitch City, hailed for her courage and determination. As the city celebrates its newfound freedom, Layla reflects on her journey and the sacrifices made along the way. With her father's legacy honored and the secrets of Glitch City laid bare, Layla looks to the future with hope and optimism.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level9B2": {
+		"text": "With justice served and the truth revealed, Layla emerges as a hero of Glitch City, hailed for her courage and determination. As the city celebrates its newfound freedom, Layla reflects on her journey and the sacrifices made along the way. With her father's legacy honored and the secrets of Glitch City laid bare, Layla looks to the future with hope and optimism.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level9B3": {
+		"text": "With justice served and the truth revealed, Layla emerges as a hero of Glitch City, hailed for her courage and determination. As the city celebrates its newfound freedom, Layla reflects on her journey and the sacrifices made along the way. With her father's legacy honored and the secrets of Glitch City laid bare, Layla looks to the future with hope and optimism.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level9B4": {
+		"text": "With justice served and the truth revealed, Layla emerges as a hero of Glitch City, hailed for her courage and determination. As the city celebrates its newfound freedom, Layla reflects on her journey and the sacrifices made along the way. With her father's legacy honored and the secrets of Glitch City laid bare, Layla looks to the future with hope and optimism.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level9B5": {
+		"text": "With justice served and the truth revealed, Layla emerges as a hero of Glitch City, hailed for her courage and determination. As the city celebrates its newfound freedom, Layla reflects on her journey and the sacrifices made along the way. With her father's legacy honored and the secrets of Glitch City laid bare, Layla looks to the future with hope and optimism.",
 		"ris": ["Continue", ""],
 		"nextLev": ["end"]
 	},
 	"end": {
-		"text": "Congratulations! You've reached the end of Layla's journey in Glitch City. Whether she successfully unraveled the mysteries surrounding her father's death or encountered unexpected challenges along the way, Layla's story has come to a close. Thank you for guiding Layla through her adventure and shaping the outcome of her quest for truth in Glitch City.",
-		"ris": ["Thanks for playing", ""],
-		"nextLev": null
+		"text": "Congratulations! You've guided Layla through the twists and turns of Glitch City, helping her uncover the truth about her father's death and the secrets hidden within the city. With justice served and peace restored to Glitch City, Layla's journey comes to an end. Thank you for joining us on this adventure!",
+		"ris": ["Thanks for playing", ""]
 	}
 }
