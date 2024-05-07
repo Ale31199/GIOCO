@@ -1089,7 +1089,7 @@ frasiRandom()
 							: 'hidden'} justify-start w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col"
 					>
 						<p
-							class=" sfoca2 monst text-white md:text-[22px] sm:text-[14px] font-bold relative top-[5px] text-justify flex justify-start"
+							class=" sfoca2 monst text-white md:text-[22px] text-[14px] font-bold relative top-[5px] text-justify flex justify-start"
 						>
 							{trama}
 						</p>
