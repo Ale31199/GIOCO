@@ -1088,7 +1088,7 @@ frasiRandom()
 							: 'hidden'} justify-start w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col"
 					>
 						<p
-							class=" sfoca2 monst text-white md:text-[22px] text-[14px] font-bold relative top-[5px] text-justify flex justify-start"
+							class=" sfoca2 monst text-white md:text-[22px] text-[10px] sm:text-[13px] font-bold relative top-[5px] text-justify flex justify-start"
 						>
 							{trama}
 						</p>
@@ -1194,7 +1194,7 @@ frasiRandom()
 				disabled="{blocca}"
 				class="{blocca
 					? 'hidden cursor-default'
-					: 'opacity-100 cursor-pointer'} text-[11px] sm:text-sm md:text-[18px] sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito
+					: 'opacity-100 cursor-pointer'} text-[10px] sm:text-sm md:text-[18px] sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito
 					? 'from-neutral-950  to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900'
 					: 'from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900' &&
 						  demone
@@ -1207,7 +1207,7 @@ frasiRandom()
 				disabled="{blocca || blocca2}"
 				class=" {blocca ? 'hidden cursor-default' : 'opacity-100 cursor-pointer'} {blocca2
 					? 'hidden cursor-default'
-					: 'opacity-100 cursor-pointer'} text-[11px] sm:text-sm md:text-[18px] sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito
+					: 'opacity-100 cursor-pointer'} text-[10px] sm:text-sm md:text-[18px] sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito
 					? 'from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900'
 					: 'from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900' &&
 						  demone
