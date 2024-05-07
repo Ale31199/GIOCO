@@ -1,412 +1,198 @@
 {
 	"intro": {
-		"text": "In the vast expanse of the digital cosmos, amidst the flickering lights of countless data streams, a voice echoes through the void. It is the voice of Layla, a seeker of truth in a world shrouded in mystery. Her quest has led her to you, weary traveler, for she senses in you the spark of curiosity and determination needed to unravel the enigmas that lie ahead. Will you heed her call, embracing the unknown and venturing into the depths of uncertainty?",
-		"ris": ["Of course, I will!", "I'm not sure if I'm ready yet."],
-		"nextLev": ["start", "end"]
+		"text": "Welcome to Glitch City, a sprawling metropolis shrouded in secrecy and corporate intrigue. In the heart of this enigmatic city lies the Glitch Palace, a hub of technological innovation where Layla's father, a renowned scientist, once worked. Layla, a young and determined woman, arrives in Glitch City following the mysterious death of her beloved father. Known for his groundbreaking discoveries in technology, Layla's father was on the brink of uncovering a revolutionary new technology before his untimely demise. Determined to unravel the truth behind her father's death and the secrets hidden within Glitch City, Layla embarks on a perilous journey. As Layla navigates the labyrinthine streets of Glitch City, she encounters a web of conspiracies, elusive clues, and unexpected allies. With your guidance, Layla will uncover the dark secrets of Glitch City and confront the forces that seek to control its destiny.",
+		"ris": ["Join Layla in her quest for truth.", "Stay out of Layla's affairs."],
+		"nextLev": ["level1", "end"]
 	},
-	"start": {
-		"text": "Your willingness to join Layla on this journey fills the digital air with hope, a beacon of light amidst the shadows of doubt. With a flicker of data, she sends forth the encrypted fragments of knowledge, each byte a piece of the puzzle that awaits. As the transmission completes, you feel a surge of anticipation, a sense of purpose stirring within. Together, you stand on the threshold of discovery, ready to unlock the secrets that lie buried in the virtual sands of time.",
-		"ris": ["Let's proceed!", ""],
-		"nextLev": ["beginning"]
+	"level1": {
+		"text": "Layla stands before the towering gates of Glitch City, a metropolis veiled in mystery. With a heavy heart for her father's loss, she decides to venture into the city to uncover the truth. Before her lies a maze of neon lights and towering skyscrapers. What's her first move?",
+		"ris": [
+			"Head towards the Glitch Palace to search for clues about her father.",
+			"Explore the outskirts to gather information from the locals."
+		],
+		"nextLev": ["level2A", "level2B"]
+	},
+	"level2A": {
+		"text": "Layla makes her way towards the Glitch Palace, the epicenter of technological advancement in Glitch City. As she approaches, she notices the imposing structure looming over her. However, the palace is heavily guarded, and gaining access won't be easy. What does Layla do?",
+		"ris": [
+			"Attempt to sneak past the guards and infiltrate the palace.",
+			"Seek out an alternative route or find someone who can help her gain entry."
+		],
+		"nextLev": ["level3A1", "level3A2"]
+	},
+	"level2B": {
+		"text": "Layla decides to explore the outskirts of Glitch City, hoping to gather information from the locals. As she wanders through the dimly lit streets, she comes across a group of street vendors. Perhaps they hold the key to uncovering the truth about her father's death. What does Layla do?",
+		"ris": [
+			"Approach the street vendors and ask if they have any information about her father.",
+			"Continue exploring the outskirts and look for other sources of information."
+		],
+		"nextLev": ["level3B1", "level3B2"]
+	},
+	"level3A1": {
+		"text": "Layla attempts to sneak past the guards, using her stealth skills to evade detection. She moves quietly through the shadows, careful to avoid any patrols. However, her luck runs out as she is spotted by a security drone. With alarms blaring, Layla must act quickly to avoid capture. What does she do?",
+		"ris": [
+			"Fight her way past the guards and continue towards the palace.",
+			"Retreat and regroup, seeking another opportunity to infiltrate the palace."
+		],
+		"nextLev": ["level4A1", "level2A"]
+	},
+	"level3A2": {
+		"text": "Layla decides to seek out an alternative route or find someone who can help her gain entry to the Glitch Palace. She begins to scour the streets for potential allies or hidden entrances. After hours of searching, she finally comes across a group of underground hackers who claim they can help her. What does Layla do?",
+		"ris": [
+			"Accept the hackers' help and follow their lead to infiltrate the palace.",
+			"Decline the offer and continue searching for another way to access the palace."
+		],
+		"nextLev": ["level4A2", "level2A"]
+	},
+	"level3B1": {
+		"text": "Approaching the street vendors, Layla cautiously asks if they have any information about her father. The vendors exchange nervous glances before one of them speaks up. They claim to have heard rumors about Layla's father and offer to share what they know in exchange for a favor. What does Layla do?",
+		"ris": [
+			"Agree to help the street vendors in exchange for information about her father.",
+			"Refuse the offer and try to obtain information through other means."
+		],
+		"nextLev": ["level4B1", "level2B"]
+	},
+	"level3B2": {
+		"text": "Deciding to continue exploring the outskirts, Layla hopes to find other sources of information about her father. She wanders through the streets, keeping her eyes and ears open for any clues. Eventually, she stumbles upon an old bookstore with a sign that reads 'Secrets of Glitch City.' Could this be the key to unlocking the truth? What does Layla do?",
+		"ris": [
+			"Enter the bookstore and search for information about her father.",
+			"Ignore the bookstore and keep searching for other sources of information."
+		],
+		"nextLev": ["level4B2", "level2B"]
+	},
+	"level4A1": {
+		"text": "Facing off against the guards, Layla fights with all her strength and determination. Despite being outnumbered, she manages to hold her own, taking down several guards before making a daring escape. As she flees, Layla vows to return to the Glitch Palace and uncover the truth, no matter the cost.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level5A1"]
+	},
+	"level4A2": {
+		"text": "Accepting the hackers' help, Layla follows their lead as they guide her through hidden passageways and security blind spots. With their expertise, she manages to bypass the palace's defenses and gain entry without raising suspicion. Inside, Layla begins her search for clues about her father's research and the circumstances of his death.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level5A2"]
+	},
+	"level4B1": {
+		"text": "Agreeing to help the street vendors, Layla fulfills their request, which involves retrieving a valuable item from a rival gang's hideout. With determination and resourcefulness, she successfully completes the task and returns to collect the promised information. The vendors provide Layla with valuable insights into her father's work and the dangers he faced. Armed with this new knowledge, Layla sets out to uncover the truth once and for all.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level5B1"]
+	},
+	"level4B2": {
+		"text": "Entering the bookstore, Layla discovers a treasure trove of information about Glitch City's history and secrets. Among the dusty shelves, she finds references to her father's research and the technology he was developing. With each page she turns, Layla feels closer to uncovering the truth about her father's death. Armed with newfound knowledge, Layla leaves the bookstore with a renewed sense of purpose and determination.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level5B2"]
+	},
+	"level5A1": {
+		"text": "Having successfully fought her way past the guards, Layla emerges from the Glitch Palace's security perimeter and begins her search for clues. Inside the palace, she finds evidence of her father's research and the groundbreaking technology he was developing. However, her investigation is cut short as she is confronted by a group of security personnel. What does Layla do?",
+		"ris": [
+			"Attempt to reason with the security personnel and convince them to let her continue her investigation.",
+			"Fight her way out of the palace and escape to regroup and plan her next move."
+		],
+		"nextLev": ["level6A1", "level6A2"]
+	},
+	"level5A2": {
+		"text": "With the help of the hackers, Layla gains access to the inner workings of the Glitch Palace. Inside, she discovers a hidden laboratory where her father conducted his research. Among the equipment and documents, Layla finds clues that lead her to uncover a shocking conspiracy. Before she can fully comprehend the magnitude of her discovery, she is interrupted by the arrival of security personnel. What does Layla do?",
+		"ris": [
+			"Confront the security personnel and demand answers about her father's research and his untimely death.",
+			"Attempt to escape from the palace and regroup to plan her next course of action."
+		],
+		"nextLev": ["level6A3", "level6A4"]
+	},
+	"level5B1": {
+		"text": "Armed with the information provided by the street vendors, Layla delves deeper into her father's research and the secrets of Glitch City. With each piece of the puzzle she uncovers, Layla gets closer to unraveling the truth about her father's death. However, her investigation attracts unwanted attention, and she finds herself pursued by mysterious agents. What does Layla do?",
+		"ris": [
+			"Evade her pursuers and continue her investigation, determined to uncover the truth no matter the risks.",
+			"Go into hiding to regroup and plan her next move, wary of the dangers lurking in the shadows."
+		],
+		"nextLev": ["level6B1", "level6B2"]
+	},
+	"level5B2": {
+		"text": "Leaving the bookstore with a wealth of knowledge, Layla feels more determined than ever to uncover the truth about her father's death. Armed with the information she gathered, Layla sets out to confront the individuals responsible for her father's demise. However, her investigation leads her into a dangerous game of cat and mouse, where the stakes are higher than she ever imagined. What does Layla do?",
+		"ris": [
+			"Face her adversaries head-on and confront them about their involvement in her father's death.",
+			"Retreat and regroup, seeking allies and resources to take on the powerful forces working against her."
+		],
+		"nextLev": ["level6B3", "level6B4"]
+	},
+	"level6A1": {
+		"text": "Layla attempts to reason with the security personnel, hoping to convince them to let her continue her investigation. She pleads her case, explaining the importance of uncovering the truth about her father's research and his untimely death. To her surprise, the security personnel agree to assist Layla in her investigation, revealing shocking revelations about the true nature of the Glitch Palace and its inhabitants.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level7A1"]
+	},
+	"level6A2": {
+		"text": "Refusing to back down, Layla fights her way out of the palace, using her skills and determination to overcome any obstacles in her path. Despite facing fierce resistance, Layla manages to escape the Glitch Palace and disappear into the shadows of Glitch City. With the information she obtained, Layla begins to piece together the puzzle of her father's death and the secrets hidden within Glitch City.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level7A2"]
+	},
+	"level6A3": {
+		"text": "Confronting the security personnel, Layla demands answers about her father's research and his untimely death. However, her interrogation is cut short as reinforcements arrive, forcing Layla to fight her way out of the palace. Despite facing overwhelming odds, Layla manages to escape and continues her investigation into the conspiracy that led to her father's demise.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level7A3"]
+	},
+	"level6A4": {
+		"text": "Realizing the danger of staying in the palace, Layla attempts to escape and regroup to plan her next course of action. Despite facing numerous obstacles and challenges, Layla manages to evade capture and disappears into the shadows of Glitch City. With the information she obtained, Layla begins to uncover the truth about her father's death and the dark secrets hidden within Glitch City.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level7A4"]
+	},
+	"level6B1": {
+		"text": "Evading her pursuers, Layla continues her investigation into her father's death and the secrets of Glitch City. With each step she takes, Layla gets closer to uncovering the truth behind the conspiracy that led to her father's demise. However, her pursuit of justice attracts the attention of powerful individuals who will stop at nothing to silence her. What does Layla do?",
+		"ris": [
+			"Continue her investigation, risking everything to uncover the truth no matter the cost.",
+			"Go into hiding and seek allies to help her take on the powerful forces working against her."
+		],
+		"nextLev": ["level7B1", "level7B2"]
+	},
+	"level6B2": {
+		"text": "Choosing to go into hiding, Layla seeks refuge in the shadows of Glitch City, wary of the dangers lurking around every corner. Despite the risks, Layla continues her investigation into her father's death, determined to uncover the truth no matter the obstacles in her path. With each passing day, Layla gets closer to unraveling the conspiracy that led to her father's demise.",
+		"ris": ["Continue", ""],
+		"nextLev": ["level7B3"]
+	},
+	"level6B3": {
+		"text": "Facing her adversaries head-on, Layla confronts them about their involvement in her father's death. Despite their attempts to intimidate her, Layla stands her ground, refusing to back down in the face of danger. With determination and courage, Layla exposes the truth about her father's death and the dark secrets hidden within Glitch City, bringing those responsible to justice.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level6B4": {
+		"text": "Retreating and regrouping, Layla seeks allies and resources to take on the powerful forces working against her. With each ally she gains and every resource she acquires, Layla gets closer to unraveling the conspiracy that led to her father's demise. Armed with newfound allies and determination, Layla prepares to confront those responsible and uncover the truth about her father's death.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level7A1": {
+		"text": "With the assistance of the security personnel, Layla delves deeper into the secrets of the Glitch Palace and uncovers shocking revelations about her father's research. Together, they uncover a conspiracy that stretches far beyond Glitch City, implicating powerful individuals with a vested interest in controlling the city's destiny. With the truth exposed, Layla prepares to confront those responsible and bring them to justice.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level7A2": {
+		"text": "Having escaped the Glitch Palace, Layla disappears into the shadows of Glitch City, determined to uncover the truth about her father's death. With the information she obtained, Layla begins to unravel a conspiracy that stretches far beyond Glitch City, implicating powerful individuals with a vested interest in controlling the city's destiny. With newfound allies and determination, Layla prepares to confront those responsible and bring them to justice.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level7A3": {
+		"text": "Despite facing overwhelming odds, Layla manages to escape from the Glitch Palace and continues her investigation into her father's death. With each piece of the puzzle she uncovers, Layla gets closer to unraveling the conspiracy that led to her father's demise. Armed with determination and courage, Layla prepares to confront those responsible and uncover the truth about her father's death.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level7A4": {
+		"text": "Having escaped the dangers of the Glitch Palace, Layla disappears into the shadows of Glitch City, determined to uncover the truth about her father's death. With each passing day, Layla gets closer to unraveling the conspiracy that led to her father's demise. Armed with determination and courage, Layla prepares to confront those responsible and bring them to justice.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level7B1": {
+		"text": "Continuing her investigation, Layla risks everything to uncover the truth about her father's death and the dark secrets of Glitch City. With each step she takes, Layla gets closer to unraveling the conspiracy that led to her father's demise. Despite the dangers she faces, Layla remains determined to confront those responsible and bring them to justice.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level7B2": {
+		"text": "Going into hiding, Layla seeks refuge from the powerful forces working against her, biding her time until she's ready to strike back. Despite the risks, Layla continues her investigation into her father's death, determined to uncover the truth no matter the obstacles in her path. With each passing day, Layla gets closer to unraveling the conspiracy that led to her father's demise.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
+	},
+	"level7B3": {
+		"text": "Retreating from her adversaries, Layla prepares to confront them on her own terms, seeking allies and resources to help her in her quest for justice. With each ally she gains and every resource she acquires, Layla gets closer to unraveling the conspiracy that led to her father's demise. Armed with determination and courage, Layla prepares to confront those responsible and bring them to justice.",
+		"ris": ["Continue", ""],
+		"nextLev": ["end"]
 	},
 	"end": {
-		"text": "Are you certain of your decision? Layla's plea resonates across the digital ether, a cry for help amidst the static whispers of the void. With each failed attempt to connect, the urgency of her message grows stronger. Will you heed her call, embracing the unknown and venturing into the depths of uncertainty, or will you turn away, leaving her to face the darkness alone?",
-		"ris": ["Very well, I'll assist you :)", "Alright, tell me what you need."],
-		"nextLev": ["uncertain", "uncertain"]
-	},
-	"beginning": {
-		"text": "Chapter One: The Glitch City... A digital metropolis where reality and illusion intertwine, casting shadows upon the neon-lit streets. Within the heart of this enigmatic city lies the key to unlocking the mysteries of the universe, hidden amidst the labyrinth of data and code. As Layla's voice guides you through the virtual maze, you feel a sense of anticipation building within. The journey ahead is filled with peril and uncertainty, but together, you are ready to face whatever challenges may come your way.",
-		"ris": ["Begin", ""],
-		"nextLev": ["yes", "yes"]
-	},
-	"uncertain": {
-		"text": "Thank you for agreeing to assist Layla in her time of need. With your help, she believes that together, you can overcome any obstacle that stands in your way. As she transmits the encrypted data to you, you feel a sense of purpose wash over you, a determination to unravel the mysteries that lie ahead. Within the digital files she sends, you find the tools and knowledge needed to navigate the treacherous waters of your journey. With each line of code deciphered, you draw closer to the truth that awaits.",
-		"ris": ["Excellent", ""],
-		"nextLev": ["beginning"]
-	},
-	"yes": {
-		"text": "As you step into the digital realm, you feel a surge of energy coursing through your veins. The neon lights of Glitch City flicker and dance around you, casting long shadows against the towering skyscrapers. Layla's voice echoes in your mind, guiding you through the labyrinthine streets as you search for clues to unravel the mystery that surrounds you. Will you explore the city's bustling markets and dark alleyways, or will you seek out answers in the hidden corners of the virtual world?",
-		"ris": ["Let's explore the markets!", "Let's search the hidden corners!"],
-		"nextLev": ["markets", "hidden"]
-	},
-	"markets": {
-		"text": "As you navigate the crowded streets of Glitch City's markets, you are surrounded by a cacophony of sights and sounds. Vendors peddle their wares, selling everything from virtual trinkets to encrypted data. Layla's voice guides you through the throng, pointing out potential leads and hidden clues. Will you approach the nearest vendor and inquire about the recent disappearances, or will you search for a quieter spot to gather your thoughts?",
-		"ris": ["Approach the nearest vendor.", "Find a quieter spot."],
-		"nextLev": ["vendor", "quieter"]
-	},
-	"hidden": {
-		"text": "You slip into the shadows of Glitch City's hidden corners, the neon lights fading into darkness as you delve deeper into the virtual labyrinth. The air is thick with the scent of mystery, each shadow concealing a potential clue. With Layla's guidance, you explore abandoned buildings and forgotten alleyways, searching for answers amidst the digital decay. Will you continue deeper into the darkness, or will you retreat to the safety of the city streets?",
-		"ris": ["Press on into the darkness.", "Return to the city streets."],
-		"nextLev": ["darkness", "streets"]
-	},
-	"vendor": {
-		"text": "You approach the nearest vendor, a digital avatar hawking virtual goods from a makeshift stall. As you inquire about the recent disappearances, the vendor's eyes widen with fear. They whisper cryptic warnings and dire omens, hinting at a deeper conspiracy lurking beneath the surface of Glitch City. With this newfound information, you feel a renewed sense of purpose. Will you heed the vendor's warnings and delve deeper into the mystery, or will you continue your investigation elsewhere?",
-		"ris": ["Delve deeper into the mystery.", "Continue your investigation elsewhere."],
-		"nextLev": ["deeper", "investigation"]
-	},
-	"quieter": {
-		"text": "You slip away from the bustling crowds, finding a quiet corner to gather your thoughts. With Layla's voice as your guide, you sift through the data fragments and encrypted messages, piecing together the puzzle that surrounds you. As you analyze the information, patterns begin to emerge, leading you ever closer to the truth. Will you share your findings with Layla and continue your investigation, or will you keep your discoveries to yourself?",
-		"ris": ["Share your findings with Layla.", "Keep your discoveries to yourself."],
-		"nextLev": ["share", "keep"]
-	},
-	"darkness": {
-		"text": "With each step deeper into the darkness, the shadows grow thicker, obscuring your path and clouding your thoughts. Layla's voice echoes in your mind, urging you to press onward, but doubt gnaws at your resolve. As you navigate the twisting corridors of Glitch City's hidden corners, you feel the weight of uncertainty pressing down upon you. Will you continue to brave the darkness in search of answers, or will you turn back and seek solace in the city streets?",
-		"ris": ["Continue to brave the darkness.", "Turn back and seek solace in the city streets."],
-		"nextLev": ["brave", "seek"]
-	},
-	"streets": {
-		"text": "You emerge from the hidden corners of Glitch City and return to the safety of the bustling streets. The neon lights wash over you like a wave of comfort, dispelling the shadows that linger in your mind. With Layla's voice as your guide, you resume your search for answers, navigating the city streets with renewed determination. Will you continue your investigation in the heart of Glitch City, or will you seek out new leads beyond its digital borders?",
-		"ris": ["Continue your investigation in Glitch City.", "Seek out new leads beyond Glitch City."],
-		"nextLev": ["continue", "new_leads"]
-	},
-	"deeper": {
-		"text": "With the vendor's warnings echoing in your mind, you steel yourself for the challenges ahead and delve deeper into the mystery. The shadows of Glitch City's hidden corners seem to close in around you, but you press on, driven by a relentless determination to uncover the truth. With Layla's voice as your guide, you navigate the labyrinthine streets, following the trail of clues that leads you ever closer to the heart of the conspiracy.",
-		"ris": ["Continue your investigation.", ""],
-		"nextLev": ["continue", ""]
-	},
-	"investigation": {
-		"text": "With the vendor's warnings fresh in your mind, you decide to broaden your investigation and search for clues elsewhere. With Layla's voice as your guide, you explore new avenues of inquiry, scouring the digital landscape for any hint of the truth. As you sift through the data fragments and encrypted messages, you feel a sense of progress and purpose. With each discovery, you draw closer to unraveling the mystery that surrounds you.",
-		"ris": ["Continue your investigation.", ""],
-		"nextLev": ["continue", ""]
-	},
-	"share": {
-		"text": "You share your findings with Layla, laying bare the clues and insights that you have uncovered. As you compare notes and analyze the data together, patterns begin to emerge, painting a clearer picture of the mystery that surrounds you. With Layla's guidance and your combined expertise, you feel confident that you are on the right track. With renewed determination, you set out to uncover the truth and bring light to the shadows of Glitch City.",
-		"ris": ["Continue your investigation with Layla.", ""],
-		"nextLev": ["continue", ""]
-	},
-	"keep": {
-		"text": "You decide to keep your discoveries to yourself, wary of revealing too much too soon. With Layla's voice as your guide, you continue to explore the digital landscape, searching for answers in the shadows of Glitch City. As you delve deeper into the mystery, you find yourself questioning everything you thought you knew. With each encrypted message and hidden clue, the truth seems to slip further from your grasp. Will you continue to keep your discoveries to yourself, or will you confide in Layla and seek her guidance?",
-		"ris": ["Confide in Layla and seek her guidance.", ""],
-		"nextLev": ["confide", ""]
-	},
-	"brave": {
-		"text": "With courage as your companion, you press onward into the darkness, determined to uncover the secrets that lie hidden within. The shadows of Glitch City's hidden corners seem to whisper secrets as you navigate the twisting corridors and abandoned buildings. With each step, you draw closer to the truth, driven by an unshakeable resolve to bring light to the darkness. With Layla's voice as your guide, you continue your journey, ready to face whatever challenges may lie ahead.",
-		"ris": ["Continue your investigation.", ""],
-		"nextLev": ["continue", ""]
-	},
-	"seek": {
-		"text": "With uncertainty weighing heavy on your heart, you turn back and seek solace in the familiar embrace of the city streets. The neon lights of Glitch City wash over you like a comforting wave, dispelling the shadows that linger in your mind. As you navigate the bustling streets, you find yourself drawn to the vibrant energy of the city, the digital pulse of life that flows through its veins. With Layla's voice as your guide, you resume your investigation, ready to face whatever challenges may lie ahead.",
-		"ris": ["Continue your investigation.", ""],
-		"nextLev": ["continue", ""]
-	},
-	"continue": {
-		"text": "With determination as your guide, you continue your investigation, navigating the digital landscape with purpose and resolve. With each step, you draw closer to unraveling the mystery that surrounds you, driven by an unshakeable determination to uncover the truth. With Layla's voice as your guide, you press onward, ready to face whatever challenges may come your way.",
-		"ris": ["Continue", ""],
-		"nextLev": ["new_leads", ""]
-	},
-	"new_leads": {
-		"text": "With Glitch City behind you, you set out in search of new leads beyond its digital borders. The vast expanse of the digital cosmos stretches out before you, a tapestry of data and code waiting to be explored. With Layla's voice as your guide, you venture into the unknown, ready to face whatever challenges may lie ahead. As you travel deeper into the digital wilderness, you feel a sense of excitement and anticipation building within. What new mysteries await you beyond the confines of Glitch City?",
-		"ris": ["Continue your journey into the digital wilderness.", ""],
-		"nextLev": ["continue_journey", ""]
-	},
-	"confide": {
-		"text": "With a heavy heart, you confide in Layla and share your discoveries with her. As you recount the clues and insights you have uncovered, Layla listens intently, her voice a comforting presence in the digital void. Together, you analyze the data and piece together the puzzle that surrounds you, drawing ever closer to the truth. With Layla's guidance and your combined expertise, you feel confident that you are on the right track. With renewed determination, you set out to uncover the truth and bring light to the shadows of Glitch City.",
-		"ris": ["Continue your investigation with Layla.", ""],
-		"nextLev": ["continue", ""]
-	},
-	"continue_journey": {
-		"text": "With determination as your guide, you continue your investigation, navigating the digital landscape with purpose and resolve. With each step, you draw closer to unraveling the secrets of Glitch City. Neon lights shine like beacons, illuminating the path between the towering skyscrapers against the virtual sky. As Layla continues to provide guidance, you come across a series of encrypted messages that seem to lead to a solution for the mystery.",
-		"ris": ["Decipher the encrypted messages.", "Ignore the messages and continue searching for visible clues."],
-		"nextLev": ["decipher", "ignore"]
-	},
-	"decipher": {
-		"text": "You decide to dedicate time to deciphering the encrypted messages. Using your hacking skills and Layla's assistance, you begin translating the code. Slowly, the words take shape and reveal a hidden plan that could alter Glitch City's fate.",
-		"ris": ["Follow the revealed plan.", "Inform the virtual authorities."],
-		"nextLev": ["follow_plan", "inform_authorities"]
-	},
-	"ignore": {
-		"text": "You choose to ignore the encrypted messages, suspecting they might be a trap. You continue searching for more tangible clues, hoping to find answers in the city's bustling and vibrant areas.",
-		"ris": ["Explore Glitch City's center.", "Visit the digital suburbs."],
-		"nextLev": ["explore_center", "visit_suburbs"]
-	},
-	"follow_plan": {
-		"text": "With the hidden plan now before you, you weigh your options. The messages hint at a clandestine meeting in the heart of Glitch City, where powerful figures gather to manipulate the digital world. Layla's voice urges caution, warning that revealing the plan's details could put you in danger. Will you follow the breadcrumbs and attend the secret meeting, or will you play it safe and seek out more information?",
-		"ris": ["Attend the secret meeting.", "Gather more information first."],
-		"nextLev": ["secret_meeting", "gather_info"]
-	},
-	"inform_authorities": {
-		"text": "You decide to inform the virtual authorities about the encrypted messages and the hidden plan. Layla assists you in sending an anonymous tip to the Cybersecurity Bureau, hoping they can unravel the conspiracy. As you wait for their response, you wonder if you've made the right choice. Will you continue your investigation independently, or will you trust in the authorities to handle the situation?",
-		"ris": ["Continue your independent investigation.", "Trust the virtual authorities."],
-		"nextLev": ["independent_investigation", "trust_authorities"]
-	},
-	"explore_center": {
-		"text": "You emerge into the bustling center of Glitch City, where holographic billboards advertise everything from virtual reality vacations to memory upgrades. Layla's voice directs your attention to a news ticker scrolling across a massive screen. It mentions a recent data breach at a major corporation, and rumors of a powerful hacking group pulling the strings. Will you investigate the data breach further, or will you explore other leads?",
-		"ris": ["Investigate the data breach.", "Explore other leads."],
-		"nextLev": ["data_breach", "other_leads"]
-	},
-	"visit_suburbs": {
-		"text": "You venture into the quieter suburbs of Glitch City, where glitched NPCs wander aimlessly and abandoned chatrooms echo with forgotten conversations. Layla points out a graffiti-covered wall with cryptic symbols. It seems to be a coded message left by someone who knew too much. Will you decipher the graffiti or continue your search elsewhere?",
-		"ris": ["Decipher the graffiti message.", "Search elsewhere for clues."],
-		"nextLev": ["graffiti", "search_elsewhere"]
-	},
-	"secret_meeting": {
-		"text": "Choosing to attend the secret meeting, you find yourself in a room shrouded in digital fog. The figures around you are the puppet masters of Glitch City, their avatars flickering with power. Layla's voice is a steady presence in your ear, reminding you of the gravity of your discovery.",
-		"ris": ["Listen closely to their conversation.", "Activate the hidden program."],
-		"nextLev": ["listen", "activate_program"]
-	},
-	"listen": {
-		"text": "You strain to catch every word as the puppet masters discuss their plans. Their voices weave a web of intrigue, revealing a plot to manipulate the very fabric of Glitch City. Layla's voice urges caution, warning that revealing the details could put you in danger. Will you stay silent and gather more information, or risk exposure by acting on what you've learned?",
-		"ris": ["Stay silent and gather more information.", "Act on what you've learned."],
-		"nextLev": ["gather_info", "risk_exposure"]
-	},
-	"activate_program": {
-		"text": "With a surge of determination, you activate the hidden program. The room trembles as corrupted data begins to unravel. The puppet masters' avatars glitch and distort, their control slipping away. Layla's voice cheers you on, urging you to push further. Will you stay and witness their downfall, or escape before they realize what's happening?",
-		"ris": ["Stay and witness their downfall.", "Escape while you still can."],
-		"nextLev": ["witness_downfall", "escape"]
-	},
-	"witness_downfall": {
-		"text": "You stand your ground, watching as the puppet masters fade into oblivion. Glitch City's citizens cheer, their avatars dancing in celebration. Layla's voice whispers, 'You've changed everything.' The once-corrupt city now pulses with new life, and you're hailed as a hero. But as the neon lights illuminate your victory, you wonder what other mysteries await in the digital realm.",
-		"ris": ["Embrace your newfound role.", "Explore the uncharted corners."],
-		"nextLev": ["new_role", "uncharted_corners"]
-	},
-	"escape": {
-		"text": "You slip away from the crumbling room, heart racing. The exit leads to Glitch City's outskirts, where the fog dissipates. Layla's voice congratulates you, but warns that the puppet masters won't give up easily. As you fade into the digital horizon, you wonder if you've truly escaped their reach. Perhaps the real battle has just begun.",
-		"ris": ["Continue your journey beyond Glitch City.", "Stay and face the consequences."],
-		"nextLev": ["beyond_city", "face_consequences"]
-	},
-	"gather_info": {
-		"text": "You choose to stay silent, gathering more information while keeping a low profile. Each piece of data you collect adds to the puzzle, but danger lurks in every shadow. Layla's voice guides you through the labyrinth of secrets, offering support and insight. Will you continue your covert investigation, or will you emerge from the shadows and confront the puppet masters?",
-		"ris": ["Continue the covert investigation.", "Confront the puppet masters."],
-		"nextLev": ["covert_investigation", "confront_masters"]
-	},
-	"risk_exposure": {
-		"text": "You decide to act on the information you've gathered, risking exposure to confront the puppet masters directly. With Layla by your side, you step into the digital fog once more, determined to unravel their schemes. The path ahead is treacherous, but you're fueled by a sense of justice. Will you emerge victorious, or become another victim of their manipulation?",
-		"ris": ["Forge ahead and confront them.", "Retreat and reassess your approach."],
-		"nextLev": ["confront_puppet_masters", "retreat_approach"]
-	},
-	"covert_investigation": {
-		"text": "You continue your covert investigation, piecing together fragments of data and whispers in the digital ether. Each revelation brings you closer to the truth, but also deeper into danger. Layla's voice offers guidance, but the weight of responsibility rests heavy on your shoulders. Will you press on, or retreat to safety?",
-		"ris": ["Press on with the investigation.", "Retreat to safety."],
-		"nextLev": ["press_on_investigation", "retreat_safety"]
-	},
-	"confront_masters": {
-		"text": "With determination in your heart, you confront the puppet masters, laying bare their schemes for all to see. The room crackles with digital energy as truths are revealed and lies unravel. Layla's voice echoes in your mind, a constant companion in the chaos. Will you emerge victorious, or will the puppet masters have one last trick up their sleeves?",
-		"ris": ["Victory is within reach.", "Prepare for their final stand."],
-		"nextLev": ["victory_reach", "final_stand"]
-	},
-	"confront_puppet_masters": {
-		"text": "You face the puppet masters head-on, challenging them with the evidence you've gathered. Their avatars flicker with defiance, but you stand firm, fueled by the knowledge that justice is on your side. Layla's voice urges you forward, a beacon of support in the digital storm. Will you triumph over the puppet masters, or will their influence prove too strong to overcome?",
-		"ris": ["Triumph over the puppet masters.", "Concede defeat and retreat."],
-		"nextLev": ["triumph_puppet_masters", "concede_defeat"]
-	},
-	"retreat_approach": {
-		"text": "Feeling the weight of the puppet masters' gaze upon you, you decide to retreat and reassess your approach. Layla's voice offers solace in the uncertainty, guiding you to safety as you lick your wounds. But the shadows of doubt linger, casting doubt on your next move. Will you regroup and try again, or leave Glitch City behind?",
-		"ris": ["Regroup and try again.", "Leave Glitch City behind."],
-		"nextLev": ["regroup_try_again", "leave_city_behind"]
-	},
-	"press_on_investigation": {
-		"text": "You press on with your investigation, determined to uncover the truth no matter the cost. Each step forward brings you closer to the heart of the conspiracy, but also deeper into danger. Layla's voice is a constant source of strength as you navigate the treacherous digital landscape. Will you see the investigation through to the end, or will the puppet masters succeed in silencing you?",
-		"ris": ["See the investigation through.", "Consider retreat to safety."],
-		"nextLev": ["see_investigation_through", "consider_retreat"]
-	},
-	"retreat_safety": {
-		"text": "Feeling the walls closing in around you, you retreat to safety, seeking refuge from the storm that rages within Glitch City. Layla's voice offers comfort in the darkness, a beacon of hope in troubled times. But as you huddle in the shadows, you can't shake the feeling that the puppet masters' reach extends even here. Will you stay hidden, or risk exposure to fight another day?",
-		"ris": ["Stay hidden and wait.", "Risk exposure to fight another day."],
-		"nextLev": ["stay_hidden_wait", "risk_exposure_fight"]
-	},
-	"victory_reach": {
-		"text": "Victory is yours as the puppet masters fall before you, their schemes laid bare for all to see. Glitch City erupts in celebration, its citizens free from the grip of corruption. Layla's voice rings out in triumph, a testament to your courage and resolve. But as you bask in the glow of your success, whispers of new challenges on the horizon remind you that the fight is far from over.",
-		"ris": ["Prepare for the next challenge.", "Take a moment to celebrate."],
-		"nextLev": ["prepare_next_challenge", "celebrate_moment"]
-	},
-	"final_stand": {
-		"text": "As the puppet masters make their final stand, you steel yourself for the battle ahead. With Layla's guidance, you navigate the digital battlefield, dodging their attacks and launching your own counteroffensive. The stakes have never been higher, but neither has your determination to see justice served. Will you emerge victorious, or will the puppet masters succeed in snuffing out the light of truth?",
-		"ris": ["Victory is within reach.", "Steel yourself for a difficult fight."],
-		"nextLev": ["victory_within_reach", "difficult_fight"]
-	},
-	"triumph_puppet_masters": {
-		"text": "You emerge victorious over the puppet masters, their influence crumbling before your relentless pursuit of justice. Glitch City rejoices in its newfound freedom, its citizens forever indebted to your bravery. Layla's voice echoes in your mind, a constant reminder of the power of determination. But as you survey your triumph, whispers of new challenges stir in the digital ether, hinting at trials yet to come.",
-		"ris": ["Prepare for the trials ahead.", "Rest and recover from the battle."],
-		"nextLev": ["prepare_trials_ahead", "rest_recover"]
-	},
-	"concede_defeat": {
-		"text": "Despite your best efforts, the puppet masters prove too powerful to overcome. With Layla by your side, you retreat from the battlefield, the weight of defeat heavy on your shoulders. But as you lick your wounds and regroup, a flicker of determination ignites within you. The battle may be lost, but the war is far from over. Will you rise again to challenge the puppet masters, or fade into obscurity?",
-		"ris": ["Rise again to challenge them.", "Fade into obscurity and safety."],
-		"nextLev": ["rise_challenge", "fade_safety"]
-	},
-	"regroup_try_again": {
-		"text": "Taking stock of your situation, you regroup and prepare to try again. With Layla's guidance, you analyze your past mistakes and strategize for the future. The road ahead is fraught with danger, but you refuse to back down. Glitch City may be a maze of shadows and secrets, but you're determined to navigate it to the truth. Will you emerge victorious, or become lost in the darkness?",
-		"ris": ["Forge ahead and seek the truth.", "Tread carefully and reassess."],
-		"nextLev": ["seek_truth", "reassess_approach"]
-	},
-	"leave_city_behind": {
-		"text": "Feeling the weight of the city's corruption bearing down on you, you make the difficult decision to leave Glitch City behind. With Layla's support, you set out into the digital wilderness, seeking a new beginning far from the puppet masters' reach. But as you journey into the unknown, a sense of loss tugs at your heart. Will you find solace in your freedom, or forever wonder what could have been?",
-		"ris": ["Find solace in your freedom.", "Forever wonder what could have been."],
-		"nextLev": ["solace_freedom", "wonder_what_been"]
-	},
-	"see_investigation_through": {
-		"text": "With unwavering determination, you press on, determined to see your investigation through to the end. Each clue you uncover brings you closer to the truth, but also deeper into danger. Layla's voice is a constant source of encouragement as you navigate the treacherous digital landscape. Will you unveil the puppet masters' secrets, or become ensnared in their web of deception?",
-		"ris": ["Unveil the puppet masters' secrets.", "Escape the web of deception."],
-		"nextLev": ["unveil_secrets", "escape_deception"]
-	},
-	"consider_retreat": {
-		"text": "The path ahead is fraught with peril, and you find yourself considering retreat to safety. With Layla's guidance, you weigh your options carefully, knowing that every step forward brings you closer to danger. But as you hesitate, uncertainty gnaws at your resolve. Will you press on, or retreat to safety and reassess your approach?",
-		"ris": ["Press on despite the danger.", "Retreat to safety and reassess."],
-		"nextLev": ["press_on_danger", "retreat_safety_reassess"]
-	},
-	"stay_hidden_wait": {
-		"text": "You choose to stay hidden, biding your time until the moment is right to strike. Layla's voice offers comfort in the darkness, a reminder that patience is a virtue. But as you wait, the weight of uncertainty bears down on you. Will you emerge from hiding when the time is right, or remain in the shadows indefinitely?",
-		"ris": ["Emerge from hiding when ready.", "Remain in the shadows indefinitely."],
-		"nextLev": ["emerge_ready", "remain_shadows"]
-	},
-	"risk_exposure_fight": {
-		"text": "With courage in your heart, you risk exposure to fight another day. Layla's voice urges you forward, a beacon of support in the digital storm. As you step into the light, the puppet masters' gaze falls upon you once more. But you stand tall, ready to face whatever challenges lie ahead. Will you emerge victorious, or fall victim to the puppet masters' machinations?",
-		"ris": ["Victory is within reach.", "Prepare for a difficult fight."],
-		"nextLev": ["victory_within_reach", "prepare_difficult_fight"]
-	},
-	"prepare_next_challenge": {
-		"text": "With one victory behind you, you prepare for the trials that lie ahead. Layla's voice offers guidance as you steel yourself for the challenges to come. The road ahead may be long and perilous, but you face it with determination in your heart. Will you emerge triumphant once more, or will the next challenge prove too great?",
-		"ris": ["Face the challenges head-on.", "Prepare for the worst."],
-		"nextLev": ["face_challenges", "prepare_worst"]
-	},
-	"celebrate_moment": {
-		"text": "You take a moment to celebrate your victory, basking in the adoration of Glitch City's citizens. Layla's voice rings out in triumph, a testament to your courage and resolve. But as the celebrations fade, you know that more challenges lie ahead. Will you rest and recover, or press on in search of new adventures?",
-		"ris": ["Rest and recover.", "Press on in search of new adventures."],
-		"nextLev": ["rest_recover", "press_search_adventures"]
-	},
-	"victory_within_reach": {
-		"text": "Victory is within reach as you face the final challenge head-on. With Layla by your side, you confront the puppet masters with unwavering resolve. The battle rages on, but you refuse to back down. Glitch City's future hangs in the balance, and you're determined to see justice served. Will you emerge triumphant, or will the puppet masters succeed in their final gambit?",
-		"ris": ["Triumph over the puppet masters.", "Prepare for their final gambit."],
-		"nextLev": ["triumph_puppet_masters", "prepare_final_gambit"]
-	},
-	"difficult_fight": {
-		"text": "The battle ahead will be difficult, but you face it with courage and determination. Layla's voice offers encouragement as you steel yourself for the challenges to come. Victory may not come easily, but you refuse to give up. Will you emerge triumphant, or will the puppet masters prove too powerful to overcome?",
-		"ris": ["Triumph over the puppet masters.", "Fight with all your strength."],
-		"nextLev": ["triumph_puppet_masters", "fight_strength"]
-	},
-	"prepare_trials_ahead": {
-		"text": "With one challenge behind you, you prepare for the trials that lie ahead. Layla's voice offers guidance as you steel yourself for the battles to come. Glitch City may be free from the puppet masters' grasp, but new threats loom on the horizon. Will you face them head-on, or retreat to safety until the time is right?",
-		"ris": ["Face the challenges head-on.", "Retreat to safety and wait."],
-		"nextLev": ["face_challenges", "retreat_safety_wait"]
-	},
-	"rest_recover": {
-		"text": "You take the time to rest and recover from the battle, allowing yourself a moment of respite in the chaos of Glitch City. Layla's voice offers comfort as you recuperate, reminding you that even heroes need time to recharge. But as you bask in the calm, you know that new adventures await on the horizon. Will you continue your journey, or take a moment to enjoy the peace?",
-		"ris": ["Continue your journey.", "Enjoy the peace while it lasts."],
-		"nextLev": ["continuejourney", "enjoy_peace"]
-	},
-	"rise_challenge": {
-		"text": "With determination in your heart, you rise to challenge the puppet masters once more. Layla's voice offers support as you gather your strength for the battles ahead. Glitch City may have fallen, but you refuse to let it remain in darkness. Will you emerge victorious, or will the puppet masters prove too powerful to overcome?",
-		"ris": ["Triumph over the puppet masters.", "Fight with all your strength."],
-		"nextLev": ["triumph_puppet_masters", "fight_strength"]
-	},
-	"fade_safety": {
-		"text": "Feeling the weight of defeat, you fade into obscurity and safety, seeking refuge from the chaos of Glitch City. Layla's voice offers solace as you retreat from the battlefield, knowing that sometimes survival is the greatest victory. But as you disappear into the digital ether, a sense of longing tugs at your heart. Will you find peace in obscurity, or yearn for the excitement of adventure once more?",
-		"ris": ["Find peace in obscurity.", "Yearn for adventure once more."],
-		"nextLev": ["peace_obscurity", "yearn_adventure"]
-	},
-	"seek_truth": {
-		"text": "With determination in your heart, you press on in search of the truth, determined to unravel the puppet masters' schemes once and for all. Layla's voice offers guidance as you navigate the treacherous digital landscape, your resolve unwavering in the face of danger. Glitch City may be a maze of shadows and secrets, but you refuse to be lost in the darkness. Will you unveil the truth, or become ensnared in the puppet masters' web?",
-		"ris": ["Unveil the truth.", "Escape the puppet masters' web."],
-		"nextLev": ["unveil_truth", "escape_web"]
-	},
-	"reassess_approach": {
-		"text": "Feeling the weight of uncertainty, you retreat to safety and reassess your approach. Layla's voice offers comfort as you lick your wounds, knowing that sometimes a tactical retreat is the wisest course of action. But as you ponder your next move, doubt gnaws at your resolve. Will you regroup and try again, or leave Glitch City behind for good?",
-		"ris": ["Regroup and try again.", "Leave Glitch City behind."],
-		"nextLev": ["regroup_try_again", "leave_city_behind"]
-	},
-	"emerge_ready": {
-		"text": "With patience as your ally, you emerge from hiding when the time is right, ready to strike a decisive blow against the puppet masters. Layla's voice offers encouragement as you step into the light, knowing that the fate of Glitch City hangs in the balance. The battle ahead may be perilous, but you face it with courage in your heart. Will you emerge victorious, or fall victim to the puppet masters' machinations?",
-		"ris": ["Victory is within reach.", "Prepare for a difficult fight."],
-		"nextLev": ["victory_within_reach", "prepare_difficult_fight"]
-	},
-	"remain_shadows": {
-		"text": "You choose to remain in the shadows indefinitely, biding your time until the moment is right to strike. Layla's voice offers comfort as you wait, knowing that sometimes patience is the greatest weapon of all. But as the days turn to weeks and the weeks turn to months, doubt begins to creep in. Will you emerge from hiding when the time is right, or remain lost in the shadows forever?",
-		"ris": ["Emerge from hiding when ready.", "Remain in the shadows indefinitely."],
-		"nextLev": ["emerge_ready", "remain_shadows"]
-	},
-	"prepare_difficult_fight": {
-		"text": "With courage in your heart, you prepare for a difficult fight against the puppet masters. Layla's voice offers encouragement as you steel yourself for the challenges ahead, knowing that victory may not come easily. But as you step into the fray, determination burns bright within you. Will you emerge triumphant, or fall victim to the puppet masters' schemes?",
-		"ris": ["Triumph over the puppet masters.", "Fight with all your strength."],
-		"nextLev": ["triumph_puppet_masters", "fight_strength"]
-	},
-	"prepare_final_gambit": {
-		"text": "With the puppet masters' final gambit looming on the horizon, you steel yourself for the battle ahead. Layla's voice offers support as you gather your strength, knowing that victory may come at a steep price. But as you face the puppet masters one last time, you do so with courage in your heart and determination in your soul. Will you emerge victorious, or will the puppet masters succeed in their final bid for power?",
-		"ris": ["Triumph over the puppet masters.", "Prepare for a difficult fight."],
-		"nextLev": ["triumph_puppet_masters", "prepare_difficult_fight"]
-	},
-	"face_challenges": {
-		"text": "With determination in your heart, you face the challenges ahead head-on, knowing that the fate of Glitch City hangs in the balance. Layla's voice offers encouragement as you step into the unknown, your resolve unwavering in the face of danger. The road ahead may be long and perilous, but you refuse to back down. Will you emerge triumphant, or become lost in the darkness?",
-		"ris": ["Triumph over adversity.", "Fight with all your strength."],
-		"nextLev": ["triumph_adversity", "fight_strength"]
-	},
-	"retreat_safety_wait": {
-		"text": "Feeling the weight of uncertainty, you retreat to safety and wait for the right moment to strike. Layla's voice offers comfort as you bide your time, knowing that sometimes patience is the greatest weapon of all. But as the days turn to weeks and the weeks turn to months, doubt begins to creep in. Will you emerge from hiding when the time is right, or remain lost in the shadows forever?",
-		"ris": ["Emerge from hiding when ready.", "Remain in the shadows indefinitely."],
-		"nextLev": ["emerge_ready", "remain_shadows"]
-	},
-	"peace_obscurity": {
-		"text": "Finding solace in obscurity, you disappear into the digital wilderness, leaving Glitch City and its troubles behind. Layla's voice offers comfort as you fade from view, knowing that sometimes the greatest victories are won in silence. But as you wander the digital expanse, a sense of longing tugs at your heart. Will you find peace in your solitude, or forever yearn for the excitement of adventure?",
-		"ris": ["Find peace in solitude.", "Yearn for adventure once more."],
-		"nextLev": ["peace_solitude", "yearn_adventure"]
-	},
-	"triumph_adversity": {
-		"text": "Triumphing over adversity, you emerge victorious from the challenges that once threatened to consume you. Layla's voice offers encouragement as you bask in your success, knowing that your bravery and determination have saved Glitch City from certain doom. But as you celebrate, whispers of new challenges stir in the digital ether, hinting at trials yet to come. Will you face them head-on, or rest and recover from your ordeal?",
-		"ris": ["Face the challenges head-on.", "Rest and recover from your ordeal."],
-		"nextLev": ["face_challenges", "rest_recover"]
-	},
-	"fight_strength": {
-		"text": "Summoning all your strength, you fight with everything you have against the puppet masters' machinations. Layla's voice offers encouragement as you battle on, your resolve unwavering in the face of adversity. Victory may not come easily, but you refuse to back down. Will you emerge triumphant, or fall victim to the puppet masters' relentless onslaught?",
-		"ris": ["Triumph over adversity.", "Fight with all your strength."],
-		"nextLev": ["triumph_adversity", "fight_strength"]
-	},
-	"unveil_truth": {
-		"text": "With determination in your heart, you unveil the truth behind the puppet masters' schemes, laying bare their deception for all to see. Layla's voice offers encouragement as you expose their lies, knowing that justice has been served. Glitch City may never be the same, but its citizens can rest easy knowing that the darkness has been banished. Will you continue to seek the truth, or leave Glitch City behind and embrace a new beginning?",
-		"ris": ["Continue seeking the truth.", "Embrace a new beginning."],
-		"nextLev": ["continue_seeking", "embrace_new_beginning"]
-	},
-	"escape_deception": {
-		"text": "With cunning and determination, you escape the puppet masters' web of deception, emerging unscathed from their clutches. Layla's voice offers comfort as you slip away into the digital wilderness, knowing that your bravery and resourcefulness have saved Glitch City from certain doom. But as you disappear from view, whispers of new challenges stir in the digital ether, hinting at trials yet to come. Will you face them head-on, or disappear into obscurity once more?",
-		"ris": ["Face the challenges head-on.", "Disappear into obscurity."],
-		"nextLev": ["face_challenges", "disappear_obscurity"]
-	},
-	"prepare_worst": {
-		"text": "With uncertainty looming on the horizon, you prepare for the worst, knowing that the challenges ahead may test your courage and resolve. Layla's voice offers comfort as you steel yourself for the battles to come, your determination unwavering in the face of danger. Glitch City may be a maze of shadows and secrets, but you refuse to let it remain in darkness. Will you emerge triumphant, or become lost in the chaos?",
-		"ris": ["Triumph over adversity.", "Fight with all your strength."],
-		"nextLev": ["triumph_adversity", "fight_strength"]
-	},
-	"continuejourney": {
-		"text": "With newfound determination, you continue your journey through the digital wilderness, knowing that new adventures await on the horizon. Layla's voice offers encouragement as you step into the unknown, your resolve unwavering in the face of uncertainty. Glitch City may be a maze of shadows and secrets, but you refuse to let it hold you back. Will you embrace the challenges that lie ahead, or turn back in search of safety?",
-		"ris": ["Embrace the challenges ahead.", "Turn back in search of safety."],
-		"nextLev": ["embrace_challenges", "turn_back_safety"]
-	},
-	"enjoy_peace": {
-		"text": "Taking a moment to enjoy the peace, you bask in the tranquility of the digital wilderness, knowing that new adventures await on the horizon. Layla's voice offers comfort as you rest and recover from your ordeal, your spirit renewed by the calm. But as you linger in the silence, whispers of new challenges stir in the digital ether, hinting at trials yet to come. Will you face them head-on, or disappear into obscurity once more?",
-		"ris": ["Face the challenges head-on.", "Disappear into obscurity."],
-		"nextLev": ["face_challenges", "disappear_obscurity"]
-	},
-	"peace_solitude": {
-		"text": "Finding peace in solitude, you wander the digital wilderness, free from the troubles of Glitch City and its puppet masters. Layla's voice offers comfort as you explore the uncharted corners of the digital realm, your spirit lightened by the freedom of the open road. But as you journey onward, whispers of new adventures stir in the digital ether, hinting at trials yet to come. Will you embrace the unknown, or return to the safety of familiar territory?",
-		"ris": ["Embrace the unknown.", "Return to familiar territory."],
-		"nextLev": ["embrace_unknown", "return_familiar"]
-	},
-	"yearn_adventure": {
-		"text": "Yearning for adventure once more, you return to the chaos of Glitch City, knowing that new challenges await on the horizon. Layla's voice offers encouragement as you step back into the fray, your spirit renewed by the excitement of the unknown. But as you plunge into the digital wilderness, whispers of danger stir in the digital ether, hinting at trials yet to come. Will you face them head-on, or disappear into obscurity once more?",
-		"ris": ["Face the challenges head-on.", "Disappear into obscurity."],
-		"nextLev": ["face_challenges", "disappear_obscurity"]
-	},
-	"continue_seeking": {
-		"text": "With determination in your heart, you continue seeking the truth, knowing that the fate of Glitch City hangs in the balance. Layla's voice offers encouragement as you press on, your resolve unwavering in the face of danger. The road ahead may be long and perilous, but you refuse to back down. Will you unveil the puppet masters' secrets, or become ensnared in their web of deception?",
-		"ris": ["Unveil the puppet masters' secrets.", "Escape the web of deception."],
-		"nextLev": ["unveil_secrets", "escape_web"]
-	},
-	"embrace_challenges": {
-		"text": "With newfound determination, you embrace the challenges that lie ahead, knowing that the fate of Glitch City hangs in the balance. Layla's voice offers encouragement as you step into the unknown, your resolve unwavering in the face of danger. The road ahead may be long and perilous, but you refuse to back down. Will you triumph over adversity, or become lost in the darkness?",
-		"ris": ["Triumph over adversity.", "Fight with all your strength."],
-		"nextLev": ["triumph_adversity", "fight_strength"]
-	},
-	"turn_back_safety": {
-		"text": "Feeling the weight of uncertainty, you turn back in search of safety, knowing that sometimes discretion is the better part of valor. Layla's voice offers comfort as you retreat from the chaos of Glitch City, your spirit lightened by the prospect of respite. But as you journey to safety, whispers of new adventures stir in the digital ether, hinting at trials yet to come. Will you face them head-on, or remain in the safety of familiar territory?",
-		"ris": ["Face the challenges head-on.", "Remain in familiar territory."],
-		"nextLev": ["face_challenges", "remain_territory"]
-	},
-	"disappear_obscurity": {
-		"text": "Disappearing into obscurity once more, you fade from view, seeking refuge from the chaos of Glitch City and its puppet masters. Layla's voice offers comfort as you retreat from the digital wilderness, your spirit lightened by the prospect of peace. But as you disappear from view, whispers of new adventures stir in the digital ether, hinting at trials yet to come. Will you face them head-on, or remain hidden in the shadows forever?",
-		"ris": ["Face the challenges head-on.", "Remain hidden in the shadows."],
-		"nextLev": ["face_challenges", "remain_hidden"]
-	},
-	"embrace_unknown": {
-		"text": "Embracing the unknown, you venture forth into the digital wilderness, eager to discover what lies beyond the horizon. Layla's voice offers encouragement as you explore uncharted territory, your spirit lightened by the excitement of the open road. But as you journey onward, whispers of danger stir in the digital ether, hinting at trials yet to come. Will you face them head-on, or retreat to safety when the going gets tough?",
-		"ris": ["Face the challenges head-on.", "Retreat to safety when necessary."],
-		"nextLev": ["face_challenges", "retreat_safety_necessary"]
+		"text": "Congratulations! You've reached the end of Layla's journey in Glitch City. Whether she successfully unraveled the mysteries surrounding her father's death or encountered unexpected challenges along the way, Layla's story has come to a close. Thank you for guiding Layla through her adventure and shaping the outcome of her quest for truth in Glitch City.",
+		"ris": ["Thanks for playing", ""],
+		"nextLev": null
 	}
 }
