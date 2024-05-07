@@ -1056,15 +1056,22 @@ frasiRandom()
 							? 'hidden'
 							: 'flex'} {latrama
 							? 'hidden'
-							: 'flex'} justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col"
+							: 'flex'} justify-center items-center w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[40px] flex-col"
 					>
 						<p
-							class=" sfoca2 monst text-white text-[10px] md:text-sm font-bold relative top-[-18px] text-justify flex justify-start"
+							class=" sfoca2 monst text-white text-[10px] md:text-[14px] font-bold relative top-[25px] text-justify flex justify-start"
 						>
-							Welcome to Undead Layla! Before we start, insert your name, then click 'Done' to update the game. The page
-							will reload automatically and you'll be able to start the game.
+							In a dystopian future, the young and brilliant hacker Layla discovers a disturbing anomaly in the very
+							fabric of reality: an entire city has vanished, erased from every archive and collective memory.
+							Determined to uncover the mystery of this "Glitch City," Layla turns to a player, an expert in virtual
+							adventures, to help her in her investigations. Guided by Layla's voice, the player embarks on a journey
+							through a world of virtual reality, encrypted secrets, and political entanglements, solving puzzles and
+							facing dangers to uncover the hidden truth behind the disappearance of Glitch City and its connection to a
+							dark conspiracy threatening the balance of the world itself. Amid unlikely alliances, betrayals, and
+							surprising revelations, Layla and the player must collaborate to unveil the mysteries hidden at the heart
+							of virtual reality and protect the future of humanity.
 						</p>
-						<div class="flex justify-center items-center w-[100%] top-[15px] relative flex-col">
+						<div class="flex justify-center items-center w-[100%] top-[65px] relative flex-col">
 							<button
 								id="ins"
 								on:click="{() => {
@@ -1082,7 +1089,7 @@ frasiRandom()
 							: 'hidden'} justify-start w-[100%] h-[225px] border-t-2 border-white sfoca2 relative top-[35px] flex-col"
 					>
 						<p
-							class=" sfoca2 monst text-white text-[10px] sm:text-sm font-bold relative top-[5px] text-justify flex justify-start"
+							class=" sfoca2 monst text-white md:text-[22px] sm:text-[14px] font-bold relative top-[5px] text-justify flex justify-start"
 						>
 							{trama}
 						</p>
@@ -1188,7 +1195,7 @@ frasiRandom()
 				disabled="{blocca}"
 				class="{blocca
 					? 'hidden cursor-default'
-					: 'opacity-100 cursor-pointer'} text-[11px] sm:text-sm sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito
+					: 'opacity-100 cursor-pointer'} text-[11px] sm:text-sm md:text-[18px] sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito
 					? 'from-neutral-950  to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900'
 					: 'from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900' &&
 						  demone
@@ -1201,7 +1208,7 @@ frasiRandom()
 				disabled="{blocca || blocca2}"
 				class=" {blocca ? 'hidden cursor-default' : 'opacity-100 cursor-pointer'} {blocca2
 					? 'hidden cursor-default'
-					: 'opacity-100 cursor-pointer'} text-[11px] sm:text-sm sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito
+					: 'opacity-100 cursor-pointer'} text-[11px] sm:text-sm md:text-[18px] sfoca w-[95%] h-[50px] monst relative rounded-xl p-3 mb-2 bg-gradient-to-b {incognito
 					? 'from-neutral-950 to-neutral-900 border-2 border-neutral-700 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900'
 					: 'from-pink-950 to-pink-900 border-2 border-pink-900 hover:from-violet-950 hover:to-violet-900 hover:border-violet-900' &&
 						  demone
