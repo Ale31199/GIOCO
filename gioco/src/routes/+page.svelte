@@ -15,9 +15,9 @@
 	import theme from './effetti/theme.mp3';
 	import amb from './effetti/ambient.mp3';
 	import starta from './effetti/start.wav';
-	import sfondo from './imma/OIG.jpg';
+	import sfondo from './imma/day.jpg';
 	import sfondom from './imma/OIGmattina.jpg';
-	import sfondon from './imma/OIGnotte.jpg';
+	import sfondon from './imma/night.jpg';
 	import { writable } from 'svelte/store';
 
 	let mainSfondi = sfondo;
